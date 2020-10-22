@@ -1,0 +1,13 @@
+body
+{
+    background: url("./assets/imagenes/fondo.jpg")no-repeat center center fixed;
+    background-position: cover;
+    background-size: cover;
+    
+}
+
+@font-face {
+    font-family:Oswald;
+    src: url(./assets/fuentes/Oswald-VariableFont_wght.ttf);
+}
+

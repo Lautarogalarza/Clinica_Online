@@ -1,0 +1,383 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    outline: none;
+    font-family: Oswald;
+    font-size: 2vh;
+}
+
+
+
+  .loginContenedor{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  }
+
+
+  @-webkit-keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  
+  .containerFlex{
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+ 
+  
+  .error{
+    display: flex;
+    justify-content: center;
+    color: whitesmoke;
+    align-items: center;
+    position: absolute;
+    width: 50%;
+    height: 10%;
+    border-radius: 4px;
+    top:75%;
+    letter-spacing: 1px;
+    -webkit-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    background-color: rgb(240, 74, 74);
+
+    span{
+      font-size: 2.5vh;
+    }
+  }
+
+ 
+  
+  @-webkit-keyframes slide-in-top {
+    0% {
+      -webkit-transform: translateY(-1000px);
+              transform: translateY(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-top {
+    0% {
+      -webkit-transform: translateY(-1000px);
+              transform: translateY(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .seleccionarUser{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    select{
+      cursor: pointer;
+      width: 30%;
+      padding: 10px 20px;
+      margin: 10px 0;
+      display: block;
+      border: thin;
+      border-style: solid;
+      border-radius: 4px;
+      color:ghostwhite ;
+      border-color:#4169E1;
+      box-sizing: border-box;
+      background-color: #5981fa;
+      font-size: 2.5vh;
+    }
+  }
+
+
+  .login{
+    border-radius: 4px;
+    text-align: center;
+    background: ghostwhite;
+    position: absolute;
+
+    width: 51vw; 
+    height: 85vh;  
+
+    overflow: hidden;
+    box-shadow: 0 30px 40px rgba(0,0,0,.3);
+  }
+
+
+
+  .subLogin{
+
+    padding: 20px 20px;
+    margin: 8px 0;
+  }
+
+.fotos{
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+    justify-content:  flex-end;
+    float: right;
+    width: 50%;
+    margin-top: 1%;
+}
+
+
+
+.datosPersonales input[type=text]{
+  
+  width: 50%;
+  padding: 10px 20px;
+  margin: 20px 0;
+  display: block;
+  border: thin;
+  border-style: solid;
+  border-radius: 4px;
+  color:ghostwhite ;
+  border-color:#4169E1;
+  box-sizing: border-box;
+  background-color: #5981fa;
+  font-size: 2.5vh;
+}
+
+
+.datosAuth{
+  width: 50%;
+}
+
+
+.datosAuth input[type=email],[type=password]{
+  width: 100%;
+  padding: 10px 20px;
+  margin: 20px 0;
+  display: block;
+  border: thin;
+  border-style: solid;
+  border-radius: 4px;
+  color:ghostwhite ;
+  border-color:#4169E1;
+  box-sizing: border-box;
+  background-color: #5981fa;
+  font-size: 2.5vh;
+  
+}
+
+::placeholder{
+  color: ghostwhite;
+}
+
+.login-title{
+  
+  width: 100%;
+  height: 10%;
+  background: #4169E1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: thin;
+  border-style: solid;
+  border-color:#4169E1;
+  span{
+    font-size: 5vh;
+    color: white;
+    font-family: "Arial Narrow", Arial, "Helvetica Condensed", Helvetica, sans-serif;
+    letter-spacing: 2px;
+    
+  }
+  
+}
+
+.botonRegister{
+  margin-left: 175px;
+}
+
+.botones{
+  width: 50%;
+  position: absolute;
+  top: 85%;
+}
+
+
+.botonRegister,.botonLogin{
+  // display: inline-block;
+  position: relative;
+  background:#4169E1;
+  border-radius: 4px;
+  border: none;
+  width: 40%;
+  height: 6vh;
+  //margin: 5%;
+  cursor: pointer;
+  color: ghostwhite;
+  transition: 0.5s;
+  outline: none;
+  font-size: 2.5vh;
+  
+}
+
+.botonRegister:hover, .botonLogin:hover
+{
+  background: lightskyblue;
+  transform:scale(1.05);
+}
+
+
+
+////////PROFESIONAL////////
+
+img
+{
+    width: 5%;
+    cursor: pointer;
+    transition: 0.2s;
+    position: relative;
+   margin-top: -31%;
+    left: 4%;
+}
+
+.datosProfesional{
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+  justify-content:  flex-end;
+  float: right;
+  width: 50%;
+  margin-top: -18%;
+}
+
+
+
+.datosProfesional input[type=text]{
+
+  width: 85%;
+  padding: 10px 20px;
+  margin: 10px 0;
+  display: block;
+  border: thin;
+  border-style: solid;
+  border-radius: 4px;
+  color:ghostwhite ;
+  border-color:#4169E1;
+  box-sizing: border-box;
+  background-color: #5981fa;
+  font-size: 2.5vh;
+}
+
+.datosProfesional select{
+  cursor: pointer;
+  width: 97%;
+  padding: 10px 20px;
+  margin: 10px 0;
+  display: block;
+  border: thin;
+  border-style: solid;
+  border-radius: 4px;
+  color:ghostwhite ;
+  border-color:#4169E1;
+  box-sizing: border-box;
+  background-color: #5981fa;
+  font-size: 2.5vh;
+
+}
+
+.fotos{
+  margin-top: 1%;
+}
+
+
+.fotos input[type=file]{
+  
+  width: 97%;
+  padding: 8px 20px;
+  margin: 10px 0;
+  display: block;
+  border: thin;
+  border-style: solid;
+  border-radius: 4px;
+  color:ghostwhite ;
+  border-color:#4169E1;
+  box-sizing: border-box;
+  background-color: #5981fa;
+  font-size: 2.5vh;
+  
+  .img{
+    display: block;
+    width: 0%;
+    position: relative;
+    top: 20%;
+    }
+
+}
+
+
+.iconoQuitar{
+  display: flex;
+}
+
+.listadoEsp {
+  margin-top: -2%;
+  overflow: auto;
+  width: 50%;
+  font-size: 2vh;
+  height: 20vh;
+  border: solid 1px #4169E1;
+  border-radius: 10px;
+  text-align: center;
+
+  .icono{
+    width: 90%;
+   margin: auto;
+  }
+
+}
+
+div.espItem{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.espItem:hover {
+  background: #ffb6b6;
+}
+
+p.titEsp {
+  border-bottom: solid 1px #4169E1;
+  background-color: #4169E1;
+  font-size: 1.4em;
+  color: ghostwhite;
+}
+
+#espUno:hover,:focus,:active{
+transform: scale(1);
+}
+
+span.nombreEsp {
+  margin-left: 10px;
+}

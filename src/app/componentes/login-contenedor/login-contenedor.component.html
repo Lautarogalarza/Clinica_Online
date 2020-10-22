@@ -1,0 +1,7 @@
+<div class="login" *ngIf="visibleLogin">
+    <app-login (emitRegister)="CambiarVista($event)" ></app-login>
+</div>
+
+<div class="register" *ngIf="visibleRegister">
+    <app-register (emitRegister)="CambiarVista($event)" ></app-register>
+</div> 

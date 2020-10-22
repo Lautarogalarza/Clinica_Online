@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="loginContenedor">
+
+    <form class="login">
+
+      <div class="login-title">
+
+        <h1>INGRESO</h1>
+
+      </div>
+
+      <div class="subLogin">
+
+        <input type="email" id="fname" class="sinError" name="firstname" placeholder="Correo Electronico"
+          [(ngModel)]="correo">
+
+        <br>
+
+        <input type="password" id="lname" class="sinError" name="lastname" placeholder="Contraseña"
+          [(ngModel)]="contrasenia">
+        <br>
+
+        <div class="botones">
+          <button class="botonLogin" (click)="Login()">Ingresar</button>
+          <button class="botonRegister" (click)="EnviarRegistro()">Registrarse</button>
+        </div>
+
+        <div class="containerFlex">
+          <div *ngIf="mensaje" class="error">
+            <span> {{mensaje}}</span>
+          </div>
+        </div>
+
+
+      </div>
+
+
+    </form>
+    <div class="dropdown">
+      <img src="../../../assets/imagenes/usuarioPorDefecto.png" class="iconDrop" alt="Imagen ilustrativa de usuario">
+      <div class="dropdown-content">
+        <div class="option" (click)="Cargar('admin')">admin</div>
+        <div class="option" (click)="Cargar('profesional')">profesional</div>
+        <div class="option" (click)="Cargar('paciente')">paciente</div>
+      </div>
+    </div>
+  </div>
+
+</div>

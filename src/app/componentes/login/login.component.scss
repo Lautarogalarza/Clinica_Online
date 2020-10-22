@@ -1,0 +1,267 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    outline: none;
+    font-family: Oswald;
+    font-size: 2vh;
+    
+}
+
+
+.dropdown {
+  top: 18%;
+  width: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #4169E1;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 6px 11px;
+  z-index: 1;
+  font-size: .6em;
+  margin-left: 8%;
+  margin-top: 4%;
+  border-radius: 5px;
+  color: ghostwhite;
+}
+
+.dropdown:hover .dropdown-content {
+    cursor: pointer;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+img.iconDrop {
+  width: 116%;
+}
+
+img.iconDrop:hover {
+  cursor: pointer;
+}
+
+div.option{
+  width: 100%;
+  text-align: center;
+}
+
+div.option:hover{
+  transform: scale(1.2);
+}
+
+
+
+  .loginContenedor{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  }
+
+  @-webkit-keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+
+
+
+
+
+  .login{
+    border-radius: 4px;
+    text-align: center;
+    background: ghostwhite;
+    position: absolute;
+    top: 50%;
+    width: 50vw; 
+    height: 50vh;  
+    transform: translateY(-50%);
+    overflow: hidden;
+    box-shadow: 0 30px 40px rgba(0,0,0,.3);
+  }
+
+  
+
+  .imgcontainer {
+    width: 100%;
+    height: 20%;
+
+}
+
+.subLogin{
+
+  padding: 30px 20px;
+  margin: 8px 0;
+}
+img.avatar {
+    width: 40%;
+}
+
+.login-title{
+
+  width: 100%;
+  height: 10%;
+  background: #4169E1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: thin;
+  border-style: solid;
+  border-color:#4169E1;
+  h1{
+    font-size: 5vh;
+    color: white;
+   font-family: "Arial Narrow", Arial, "Helvetica Condensed", Helvetica, sans-serif;
+   letter-spacing: 2px;
+   
+  }
+
+}
+
+
+
+  input[type=email],[type=password]{
+    width: 100%;
+    padding: 25px 20px;
+    margin: 20px 0;
+    display: inline-block;
+    border: thin;
+    border-style: solid;
+    border-radius: 4px;
+    color:ghostwhite ;
+    border-color:#4169E1;
+    box-sizing: border-box;
+    background-color: #5981fa;
+    font-size: 2.5vh;
+   
+}
+
+::placeholder{
+    color: ghostwhite;
+}
+
+
+.containerFlex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ text-align: center;
+z-index: 1000;
+
+}
+
+
+
+.error{
+  display: flex;
+  justify-content: center;
+  color: whitesmoke;
+  align-items: center;
+  position: absolute;
+  width: 50%;
+  height: 10%;
+  border-radius: 4px;
+  top:11%;
+  letter-spacing: 1px;
+  -webkit-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  background-color: rgb(240, 74, 74);
+
+  span{
+    font-size: 3vh;
+  }
+}
+
+
+
+@-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.botonRegister{
+  margin-left: 175px;
+}
+
+
+.botonRegister,.botonLogin{
+   // display: inline-block;
+   margin-top: 5%;
+    background:#4169E1;
+    border-radius: 4px;
+    border: none;
+    width: 40%;
+    height: 6vh;
+    //margin: 5%;
+    cursor: pointer;
+    color: ghostwhite;
+    transition: 0.5s;
+    outline: none;
+    font-size: 2.5vh;
+  
+  }
+
+
+  .botonCargar{
+    width: 50%;
+    background-color:#C5EDF4;
+    color: rgb(63, 63, 63);
+    padding: 10px 24px;
+    margin: 1%;
+    font-size: 2.5vh;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .botonRegister:hover, .botonLogin:hover,.botonCargar:hover
+  {
+      background: lightskyblue;
+      transform:scale(1.05);
+  }
+
+

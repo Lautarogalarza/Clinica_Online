@@ -1,0 +1,80 @@
+<div class="container">
+  <div class="loginContenedor">
+
+    <div class="login">
+
+      <div class="login-title">
+
+        <span> {{registroMensaje}}</span>
+
+      </div>
+
+      <div class="subLogin">
+        <div class="seleccionarUser">
+          <select (change)="CambioUsuario($event)">
+            <option>Paciente</option>
+            <option>Profesional</option>
+
+          </select>
+        </div>
+
+        <div class="fotos">
+          <input type="file" (change)="CambioFotos($event,1)" id="foto1" class="sinError">
+
+          <input type="file" (change)="CambioFotos($event,2)" id="foto2" class="sinError">
+        </div>
+        <div class="datosPersonales">
+          <input type="text" class="sinError" placeholder="Nombre" [(ngModel)]="nombre">
+
+          <input type="text" class="sinError" placeholder="Apellido" [(ngModel)]="apellido">
+        </div>
+
+
+
+
+        <div class="datosAuth">
+          <input type="email" class="sinError" placeholder="Correo Electronico" [(ngModel)]="correo">
+
+          <input type="password" class="sinError" placeholder="Contraseña" [(ngModel)]="contraseia">
+        </div>
+        <div class="especialidad" *ngIf="mostrarProfesional">
+          <img src="../../../assets/imagenes/add.png" (click)="AgregarEspecialidades()">
+          <div class="datosProfesional">
+
+            <input type="text" class="masEspecialidad" placeholder="Especialidad" [(ngModel)]="especialidad">
+          </div>
+
+        </div>
+
+        <div class="listadoEsp" *ngIf="mostrarProfesional">
+          <p class="titEsp">Especialidades</p>
+          <div class="espItem" *ngFor="let item of especialidades">
+            <span class="nombreEsp">{{item}}</span>
+            <div class="iconoQuitar">
+              <img class="icono" src="../../../assets/imagenes/baseline_clear_black_18dp.png"
+                (click)="BorrarEspecialidades(item)">
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+      <div class="containerFlex">
+        <div *ngIf="mensaje" class="error">
+          <span> {{mensaje}}</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="botones">
+      <button class="botonLogin" (click)="Registrar()">Registrarse</button>
+      <button class="botonRegister" (click)="EnviarRegistro()">Cancelar</button>
+    </div>
+
+
+  </div>
+
+</div>
