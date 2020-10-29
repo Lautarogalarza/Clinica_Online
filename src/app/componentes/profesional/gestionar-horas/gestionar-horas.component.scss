@@ -1,0 +1,180 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    outline: none;
+    font-family: Oswald;
+    font-size: 2vh;
+    overflow: hidden!important;
+    z-index: 999999;
+    letter-spacing: 1px;
+    
+}
+
+.login-title{
+
+    width: 100%;
+    height: 10%;
+    background: #4169E1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: thin;
+    border-style: solid;
+    border-color:#4169E1;
+    h1{
+      font-size: 5vh;
+      color: white;
+
+     letter-spacing: 2px;
+     
+    }
+  
+  }
+
+.loginContenedor{
+    width: 150vw;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+          animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        
+  }
+
+  @-webkit-keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .botonCargar{
+    right: 5%;
+    top: 5%;
+    position: relative;
+    width: 30%;
+    display: inline-block;
+    background-color:#4169E1;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: ghostwhite;
+    //padding: 18px 24px;
+    margin: 20px 0;
+    border: none;
+    cursor: pointer;
+    font-size: 3.5vh;
+    transition: 0.5s;
+    letter-spacing: 1px;
+    
+  }
+
+  .duracion{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Horas{
+   margin-top: 3%;
+  }
+
+  .sabadoTitulo{
+   margin-top: 3%;
+  }
+
+  .desdeHastaSabado{
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .desdeHasta{
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+ 
+span{
+  font-size: 3vh;
+}
+
+   input[type=time],[type=number]{
+    width: 15%;
+    display: block;
+    border: thin;
+    border-style: solid;
+    border-radius: 4px;
+    color:ghostwhite ;
+    border-color:#4169E1;
+    box-sizing: border-box;
+    background-color: #5981fa;
+    font-size: 2.5vh;
+    
+  }
+
+  .checkDia{
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+  justify-content: space-around;
+    
+  }
+
+  .botonCancelar{
+    left: 5%;
+    top: 5%;
+    position: relative;
+    width: 30%;
+    display: inline-block;
+    background-color:#4169E1;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: ghostwhite;
+    //padding: 18px 24px;
+    margin: 20px 0;
+    border: none;
+    cursor: pointer;
+    font-size: 3.5vh;
+    transition: 0.5s;
+    letter-spacing: 1px;
+    
+  }
+  
+  .botonCancelar:hover, .botonCargar:hover
+  {
+    background: lightskyblue;
+    transform:scale(1.05);
+  }
+  
+  .login{
+    border-radius: 4px;
+    text-align: center;
+    background: ghostwhite;
+    position: absolute;
+    top: 50%;
+    width: 50vw; 
+    height: 60vh;  
+    transform: translateY(-50%);
+    overflow: hidden;
+    box-shadow: 0 30px 40px rgba(0,0,0,.3);
+    
+  }
+
+ 

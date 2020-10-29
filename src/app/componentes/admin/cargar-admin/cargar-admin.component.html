@@ -1,0 +1,39 @@
+<div class="contenedor">
+    <div class="loginContenedor">
+
+        <div class="login">
+
+            <div class="login-title">
+                <h1>CARGAR ADMIN</h1>
+            </div>
+
+            <div class="subLogin">
+
+                <input type="email" id="fname" class="sinError" name="firstname" placeholder="Correo Electronico"
+                    [(ngModel)]="correo">
+
+                <br>
+
+                <input type="password" id="lname" class="sinError" name="lastname" placeholder="Contraseña"
+                    [(ngModel)]="contrasenia">
+                <br>
+
+                <div class="botones">
+                    <button class="botonActivar" (click)="Register()">Cargar</button>
+                </div>
+
+                <div class="containerFlex">
+                    <div *ngIf="mensaje" class="error">
+                        <span> {{mensaje}}</span>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <button class="botonLogin" (click)="Cancelar()">Cancelar</button>
+        </div>
+
+    </div>
+
+</div>

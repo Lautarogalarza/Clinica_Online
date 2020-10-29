@@ -6,6 +6,21 @@ body
     
 }
 
+
+
+.contenedor{
+    margin: 0;
+    padding: 0;
+    background-size: 100vw 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+
 @font-face {
     font-family:Oswald;
     src: url(./assets/fuentes/Oswald-VariableFont_wght.ttf);

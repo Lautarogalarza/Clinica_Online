@@ -68,6 +68,7 @@ export class RegisterComponent implements OnInit {
         this.authService.Register(this.correo, this.contraseia).then(response => {
           this.SubirFotos(response.user.uid);
           let profesional = new Profesional(this.nombre, this.correo, this.apellido, this.contraseia, this.fotoCargada1, this.fotoCargada2, this.especialidades);
+          //this.userService.CargarEspecialidades(profesional);
           this.userService.RegistrarProfesional(profesional);
           this.Limpiar();
           this.EnviarRegistro();

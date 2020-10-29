@@ -1,0 +1,89 @@
+
+*{
+    font-family: Oswald;
+    overflow: hidden;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: none;
+    
+}
+
+
+.profesionalPorApellido{
+
+    margin-top: 10px;
+}
+
+.cuerpo {
+    width: 100vw;
+    height: 92%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.columna1 {
+    flex: 100%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.columna2 {
+    flex: 100%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: white;
+    border: solid 1px #4169E1;
+    border-radius: 5px;
+    width: 80%;
+    height: 60%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.titulo {
+    font-size: 3em;
+    background: #4169E1;
+    color: white;
+    width: 100%;
+    height: 15%;
+    text-align: center;
+}
+
+.tabla {
+    height: 85%;
+    width: 100%;
+    overflow: auto;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+th{
+    font-size: 1.5em;
+}
+
+tr:hover{
+    cursor: pointer;
+    background-color:#7995e9;
+}
+
+
+

@@ -1,0 +1,13 @@
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+h1{
+    color: #4169E1;
+    font-size: 6vh;
+
+}

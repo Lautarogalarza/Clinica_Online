@@ -1,0 +1,25 @@
+<div class="contenedor">
+
+    <div class="contenedorBotones">
+        <div class="botones" [hidden]="">
+            <button class="botonLogin" (click)='CargarProf()'>Habilitar Profesional</button>
+            <button class="botonLogin" (click)='CargarAdmin()'>Cargar nuevo administrador</button>
+            <button class="botonLogin">Agregar especialidad a profesional</button>
+            <button class="botonLogin">Sin implementar</button>
+
+        </div>
+
+        <div class="componentes">
+
+            <div class="HabilitarProfesional" *ngIf="habilitadoCargarProf">
+                <app-habilitar-profesional (emitCancelar)='CancelarHabilitarProf($event)'></app-habilitar-profesional>
+            </div>
+
+            <div class="CargarAdmin" *ngIf="habilitadoCargarAdmin">
+                <app-cargar-admin (emitCancelar)='CancelarCargarAdmin($event)'></app-cargar-admin>
+            </div>
+        </div>
+
+    </div>
+
+</div>

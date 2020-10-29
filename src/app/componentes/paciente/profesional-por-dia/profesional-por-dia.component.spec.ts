@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HomeComponent } from './home.component';
+import { ProfesionalPorDiaComponent } from './profesional-por-dia.component';
 
-describe('HomeComponent', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
+describe('ProfesionalPorDiaComponent', () => {
+  let component: ProfesionalPorDiaComponent;
+  let fixture: ComponentFixture<ProfesionalPorDiaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HomeComponent ]
+      declarations: [ ProfesionalPorDiaComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HomeComponent);
+    fixture = TestBed.createComponent(ProfesionalPorDiaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

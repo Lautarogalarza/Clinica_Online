@@ -1,0 +1,21 @@
+<div class="tabla">
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Especialidad</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let profesional of listaProfesionales">
+                <td>{{profesional.nombre}} </td>
+                <td>{{profesional.apellido}}</td>
+                <td>{{profesional.especialidades}}</td>
+            </tr>
+        </tbody>
+
+
+    </table>
+</div>

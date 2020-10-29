@@ -1,0 +1,29 @@
+.tabla {
+    height: 85%;
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+th{
+    font-size: 1.5em;
+}
+
+tbody{
+
+    tr:hover{
+        cursor: pointer;
+        background-color:#7995e9;
+    }
+}
+
+

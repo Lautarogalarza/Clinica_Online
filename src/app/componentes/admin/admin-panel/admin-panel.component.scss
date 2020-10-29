@@ -1,0 +1,56 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    outline: none;
+    font-family: Oswald;
+
+}
+
+
+.botones{
+
+    text-align: center;
+    background: ghostwhite;
+    position: absolute;
+    top: 50%;
+    width: 50vw; 
+    height: 86vh;  
+    transform: translateY(-50%);
+    border-radius: 10px;
+    box-shadow: 0 30px 40px rgba(0,0,0,.3);
+    overflow: hidden;
+  }
+  
+  .contenedorBotones{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .botonLogin{
+    top: 10%;
+    position: relative;
+    width: 90%;
+    display: inline-block;
+    background-color:#4169E1;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: ghostwhite;
+    padding: 18px 24px;
+    margin: 20px 0;
+    border: none;
+    cursor: pointer;
+    font-size: 4.5vh;
+    transition: 0.5s;
+    letter-spacing: 1px;
+    
+  }
+  
+  .botonRegister:hover, .botonLogin:hover
+  {
+    background: lightskyblue;
+    transform:scale(1.05);
+  }

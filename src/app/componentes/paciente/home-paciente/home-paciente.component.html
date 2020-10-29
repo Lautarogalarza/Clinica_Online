@@ -1,0 +1,65 @@
+<app-cabecera></app-cabecera>
+
+<div class="contenedor">
+
+
+    <div class="cuerpo">
+
+        <div class="columna1">
+            <div class="card">
+                <div class="titulo">
+                    <span>Pedir Turno</span>
+                </div>
+                <div class="tabla">
+                    <table>
+                        <tr>
+                            <th>Apellido</th>
+                            <th>Especialidad</th>
+                            <th>Semana</th>
+                        </tr>
+                        <!-- <app-profesional-por-dia></app-profesional-por-dia> -->
+                    </table>
+                    <div class="profesionalPorApellido" *ngIf="true">
+                        <app-profesional-por-apellido [listaProfesionales]='listadoProfesionales'>
+                        </app-profesional-por-apellido>
+                    </div>
+
+                    <div class="profesionalPorEspecialidad" *ngIf="false">
+                        <app-profesional-por-especialidad [listaProfesionales]='listadoProfesionales'>                            
+                        </app-profesional-por-especialidad>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="columna2">
+            <div class="card">
+                <div class="titulo">
+                    <span>Mis Turnos</span>
+                </div>
+                <div class="tabla">
+                    <table>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Hora</th>
+                            <th>Profesional</th>
+                            <th>Especialidad</th>
+                            <th>Estado</th>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</div>
+<div class="pedirTurno" *ngIf="false">
+    <app-pedir-turno></app-pedir-turno>
+
+</div>

@@ -1,0 +1,62 @@
+<div class="contenedor">
+    <div class="loginContenedor">
+        <div class="login">
+            <div class="login-title">
+                <h1>Gestionar horas</h1>
+            </div>
+
+            <div class="dias">
+                <div class="checkDia">
+                    <label><input type="checkbox" checked id="lunes" [(ngModel)]='dias.lunes' >Lunes</label>
+                    <label><input type="checkbox" id="martes" [(ngModel)]='dias.martes'>Martes</label>
+                    <label><input type="checkbox" id="miercoles" [(ngModel)]='dias.miercoles'>Miércoles</label>
+                    <label><input type="checkbox" id="jueves" [(ngModel)]='dias.jueves'>Jueves</label>
+                    <label><input type="checkbox" id="viernes" [(ngModel)]='dias.viernes'>Viernes</label>
+                    <label><input type="checkbox" id="sabado" [(ngModel)]='dias.sabado' (change)='CargarSabado()'>Sábado</label>
+                </div>
+            </div>
+
+            <div class="Horas">
+                <span class="tituloHoras">Horas</span>
+                <div class="horarios">
+                    <div class="desdeHasta">
+
+                        <span class="desdeTitulo">Desde: </span>
+                        <input type="time" id="horaDesde" required min="08:00" max="18:30" [(ngModel)]='desde'>
+
+                        <span class="desdeTitulo"> Hasta: </span>
+                        <input type="time" id="horaHasta" required min="8:30" max="19:00" [(ngModel)]='hasta'>
+
+                    </div>
+                    <div class="duracion">
+                        <span>Duracion de turnos: </span>
+                        <input type="number" id="duracion" value=30 min=10 [(ngModel)]='duracion'>
+
+                    </div>
+                    <div class="sabado" *ngIf="sabadoCargado">
+
+                        <div class="sabadoTitulo">
+
+                            <span>Horario sabado: </span>
+                        </div>
+                        <div class="desdeHastaSabado">
+                            <span class="desdeTitulo">Desde: </span>
+                            <input type="time" id="horaDesde" required min="08:00" max="18:30"
+                                [(ngModel)]='desdeSabado'>
+
+                            <span class="desdeTitulo"> Hasta: </span>
+                            <input type="time" id="horaHasta" required min="8:30" max="19:00" [(ngModel)]='hastaSabado'>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <button class="botonCargar" (click)="CargarHoras()">Cargar</button>
+            <button class="botonCancelar" (click)="Cancelar()">Cancelar</button>
+        </div>
+
+    </div>
+
+</div>

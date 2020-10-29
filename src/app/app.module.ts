@@ -14,10 +14,22 @@ import { RegisterComponent } from './componentes/register/register.component';
 import { LoginContenedorComponent } from './componentes/login-contenedor/login-contenedor.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { AuthService } from "./servicios/auth.service";
-import { NoExisteComponent } from './componentes/no-existe/no-existe.component';
 import { CabeceraComponent } from './componentes/cabecera/cabecera.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { HomeComponent } from './componentes/home/home.component';
+import { NoExisteComponent } from './componentes/no-existe/no-existe.component';
+import { HomePacienteComponent } from './componentes/paciente/home-paciente/home-paciente.component';
+import { HomeProfesionalComponent } from './componentes/profesional/home-profesional/home-profesional.component';
+import { PedirTurnoComponent } from './componentes/paciente/pedir-turno/pedir-turno.component';
+import { ProfesionalPorApellidoComponent } from './componentes/paciente/profesional-por-apellido/profesional-por-apellido.component';
+import { ProfesionalPorDiaComponent } from './componentes/paciente/profesional-por-dia/profesional-por-dia.component';
+import { ProfesionalPorEspecialidadComponent } from './componentes/paciente/profesional-por-especialidad/profesional-por-especialidad.component';
+import { AdminPanelComponent } from './componentes/admin/admin-panel/admin-panel.component';
+import { CargarAdminComponent } from './componentes/admin/cargar-admin/cargar-admin.component';
+import { HabilitarProfesionalComponent } from './componentes/admin/habilitar-profesional/habilitar-profesional.component';
+import { AgregarEspecialidadComponent } from './componentes/admin/agregar-especialidad/agregar-especialidad.component';
+import { GestionarHorasComponent } from './componentes/profesional/gestionar-horas/gestionar-horas.component';
+import { GestionarTurnosComponent } from './componentes/profesional/gestionar-turnos/gestionar-turnos.component';
+import { AtenderPacienteComponent } from './componentes/profesional/atender-paciente/atender-paciente.component';
 
 @NgModule({
   declarations: [
@@ -26,9 +38,21 @@ import { HomeComponent } from './componentes/home/home.component';
     RegisterComponent,
     LoginComponent,
     RegisterComponent,
-    NoExisteComponent,
     CabeceraComponent,
-    HomeComponent
+    NoExisteComponent,
+    HomePacienteComponent,
+    HomeProfesionalComponent,
+    PedirTurnoComponent,
+    ProfesionalPorApellidoComponent,
+    ProfesionalPorDiaComponent,
+    ProfesionalPorEspecialidadComponent,
+    AdminPanelComponent,
+    CargarAdminComponent,
+    HabilitarProfesionalComponent,
+    AgregarEspecialidadComponent,
+    GestionarHorasComponent,
+    GestionarTurnosComponent,
+    AtenderPacienteComponent
   ],
   imports: [
     BrowserAnimationsModule,

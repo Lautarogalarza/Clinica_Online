@@ -1,7 +1,8 @@
 import { Component, EventEmitter, OnInit, Output } from "@angular/core";
 import { Router, ActivatedRoute, ParamMap } from "@angular/router";
 import { AuthService } from "../../servicios/auth.service";
-import { Subscription } from "rxjs";
+import { Observable, Subscription } from "rxjs";
+import { AngularFireDatabase } from '@angular/fire/database';
 
 @Component({
   selector: 'app-login',
@@ -15,6 +16,9 @@ export class LoginComponent implements OnInit {
   contrasenia = "";
   mensaje: string;
 
+  usuarios: Observable<any[]>;
+  listadoUsuarios = [];
+
 
   @Output() emitRegister: EventEmitter<any> = new EventEmitter();
 
@@ -22,23 +26,38 @@ export class LoginComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private authService: AuthService
+    private authService: AuthService,
+    private context: AngularFireDatabase
   ) {
 
+    this.authService.LogOutCurrentUser();
+
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.usuarios = this.context.list('usuarios').valueChanges();
+    this.usuarios.subscribe(usuarios => {
+      this.listadoUsuarios = usuarios;
+    }, error => console.log(error));
+  }
 
-  ValidarAdmin(user) {
-
-    if (user.email == "admin@admin.com" ||
-      user.email == "paciente@paciente.com" ||
-      user.email == "profesional@profesional.com") {
-      this.router.navigate(["/home"]);
+  ValidarAdmin(usuario) {
+    let userAdmin = this.listadoUsuarios.filter(u => u.id == usuario.uid);
+    if (userAdmin[0].perfil == "admin") {
+      this.router.navigate(["/admin"]);
     }
+    else if (usuario.email == "profesional@profesional.com") {
+
+      this.router.navigate(["/profesional"]);
+    }
+    else if (usuario.email == "paciente@paciente.com") {
+      this.router.navigate(["/paciente"]);
+    }
+
   }
 
-  
+
+
   CargarMensaje(mensaje: string) {
 
     this.mensaje = mensaje;
@@ -49,12 +68,24 @@ export class LoginComponent implements OnInit {
 
   }
 
+  ValidarUser(usuario) {
+
+    let user = this.listadoUsuarios.filter(u => u.id == usuario.user.uid);
+    console.log(usuario);
+
+    if (user[0].perfil == "profesional") {
+      this.router.navigate(["/profesional"]);
+    } else {
+      this.router.navigate(["/paciente"]);
+    }
+
+  }
+
   Login() {
     this.authService.Login(this.correo, this.contrasenia).then((response: any) => {
       this.ValidarAdmin(response.user);
       if (response.user.emailVerified) {
-
-        this.router.navigate(["/home"]);
+        this.ValidarUser(response);
       }
       else {
         this.CargarMensaje("Falta verificar correo electronico");

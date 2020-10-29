@@ -1,0 +1,28 @@
+<div class="contenedor">
+
+    <div class="contenedorBotones">
+        <div class="botones" [hidden]="">
+            <button class="botonLogin" (click)='CargarHoras()'>Gestionar horarios</button>
+            <button class="botonLogin" (click)='CargarTurnos()'>Gestionar pacientes</button>
+            <button class="botonLogin" (click)='CargarAtender()'>Atender pacientes</button>
+        </div>
+
+        <div class="componentes">
+
+            <div class="GestionarHorarios" *ngIf="habilitadoCargarHoras">
+                <app-gestionar-horas (emitCancelar)='CancelarHoras($event)'></app-gestionar-horas>
+            </div>
+
+            <div class="GestionarTurnos" *ngIf="habilitadoCargarTurnos">
+                <app-gestionar-turnos (emitCancelar)='CancelarTurnos($event)'></app-gestionar-turnos>
+            </div>
+
+            <div class="AtenderPaciente" *ngIf="habilitadoCargarAtender">
+                <app-atender-paciente (emitCancelar)='CancelarAtender($event)'></app-atender-paciente>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
