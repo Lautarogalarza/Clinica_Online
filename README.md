@@ -12,8 +12,8 @@ _Este proyecto fue creado con:_
 * [Firebase](https://firebase.google.com/) - Herramientas de autenticacion y base de datos utilizadas.
 
 # Autor
-_[Rosas Thomas](https://www.linkedin.com/in/lautaro-galarza-354a75159/)_
+_[Lautaro Galarza](https://www.linkedin.com/in/lautaro-galarza-354a75159/)_
 
 # Copate y probala
-_[Clínica Online - Rosas Thomas](https://clinica-online-galarza.herokuapp.com/)_
+_[Clínica Online - Lautaro Galarza](https://clinica-online-galarza.herokuapp.com/)_
 
