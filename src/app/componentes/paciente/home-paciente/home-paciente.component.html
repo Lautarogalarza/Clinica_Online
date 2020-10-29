@@ -20,12 +20,13 @@
                         <!-- <app-profesional-por-dia></app-profesional-por-dia> -->
                     </table>
                     <div class="profesionalPorApellido" *ngIf="true">
-                        <app-profesional-por-apellido [listaProfesionales]='listadoProfesionales'>
+                        <app-profesional-por-apellido (emitProfesional)='TomarProfesional($event)'
+                            [listaProfesionales]='listadoProfesionales'>
                         </app-profesional-por-apellido>
                     </div>
 
                     <div class="profesionalPorEspecialidad" *ngIf="false">
-                        <app-profesional-por-especialidad [listaProfesionales]='listadoProfesionales'>                            
+                        <app-profesional-por-especialidad [listaProfesionales]='listadoProfesionales'>
                         </app-profesional-por-especialidad>
                     </div>
 
@@ -41,13 +42,30 @@
                 </div>
                 <div class="tabla">
                     <table>
-                        <tr>
-                            <th>Fecha</th>
-                            <th>Hora</th>
-                            <th>Profesional</th>
-                            <th>Especialidad</th>
-                            <th>Estado</th>
-                        </tr>
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Hora</th>
+                                <th>Profesional</th>
+                                <th>Especialidad</th>
+                                <th>Estado</th>
+                                <th>Accion</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr *ngFor="let item of listaTurnos">
+                                <td>{{item.solicitudFecha}} </td>
+                                <td>{{item.solicitudHora}}</td>
+                                <td>{{item.profesionalCorreo}} </td>
+                                <td>{{item.area}}</td>
+                                <td><span [ngClass]="{
+                                    rechazado: item.estado == 'RECHAZADO', 
+                                    pendiente: item.estado == 'PENDIENTE', 
+                                    aceptado: item.estado == 'ACEPTADO' , 
+                                    atendido: item.estado == 'ATENDIDO'}">{{item.estado}}</span></td>
+                            </tr>
+                        </tbody>
 
                     </table>
                 </div>
@@ -59,7 +77,6 @@
 
 
 </div>
-<div class="pedirTurno" *ngIf="false">
-    <app-pedir-turno></app-pedir-turno>
-
+<div class="pedirTurno" *ngIf="pedirTurno">
+    <app-pedir-turno [profesional]='profesional' (emitCancelar)='Cancelar($event)'></app-pedir-turno>
 </div>

@@ -4,12 +4,38 @@
         <div class="login">
 
             <div class="login-title">
-
                 <h1>Pedir Turno</h1>
+            </div>
+
+            <div class="subLogin" *ngIf="profesional">
+
+                <label>NOMBRE</label>
+                <label>APELLIDO</label>
+                <label>CORREO</label>
+
+                <div class="datosUsuario">
+                    <span class="datosUser"> {{profesional.nombre}} </span>
+                    <span class="datosUser"> {{profesional.apellido}} </span>
+                    <span class="datosUser"> {{profesional.especialidades}} </span>
+                </div>
+
+                <div class="datosCargar">
+                    <select>
+                        <option disabled selected hidden>Dias</option>
+                        <option [value]="item" *ngFor="let item of diasFiltrados">{{item}}</option>
+                    </select>
+                    <select>
+                        <option disabled selected hidden>Especialidades</option>
+                        <option [value]="item" *ngFor="let item of profesional.especialidades">{{item}}</option>
+                    </select>
+                    <input type="time" id="horaDesde" required min="08:00" max="18:30" [(ngModel)]='hora'>
+                    <input type="date" id="horaDesde" required min="08:00" max="18:30" [(ngModel)]='fecha'>
+
+                </div>
 
             </div>
 
-
+            <button class="botonLogin" (click)="Cancelar()">Cancelar</button>
         </div>
 
     </div>

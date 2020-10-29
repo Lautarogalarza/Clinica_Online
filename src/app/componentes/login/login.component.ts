@@ -71,10 +71,15 @@ export class LoginComponent implements OnInit {
   ValidarUser(usuario) {
 
     let user = this.listadoUsuarios.filter(u => u.id == usuario.user.uid);
-    console.log(usuario);
 
     if (user[0].perfil == "profesional") {
-      this.router.navigate(["/profesional"]);
+      if (user[0].habilitado == false) {
+        this.router.navigate(["/noHabilitado"]);
+      }
+      else {
+
+        this.router.navigate(["/profesional"]);
+      }
     } else {
       this.router.navigate(["/paciente"]);
     }

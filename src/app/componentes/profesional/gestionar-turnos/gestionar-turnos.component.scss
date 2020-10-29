@@ -4,7 +4,6 @@
     outline: none;
     font-family: Oswald;
     font-size: 2vh;
-    overflow: hidden!important;
     z-index: 999999;
     
 }
@@ -59,7 +58,7 @@
   }
 
   .botonLogin{
-    top: 65%;
+    top: 5%;
     position: relative;
     width: 30%;
     display: inline-block;
@@ -77,16 +76,14 @@
     
   }
 
-  .botonActivar{
-    top: 65%;
+  .botonAceptar{
     position: relative;
-    width: 50%;
+    width: 85%;
     display: inline-block;
-    background-color:#4169E1;
+    background-color:#6fb454;
     border-radius: 4px;
     box-sizing: border-box;
     color: ghostwhite;
-    //padding: 18px 24px;
     margin: 5px 0;
     border: none;
     cursor: pointer;
@@ -95,10 +92,40 @@
     letter-spacing: 1px;
     
   }
-  
-  .botonActivar:hover, .botonLogin:hover
+
+  .botonRechazar{
+    position: relative;
+    width: 85%;
+    display: inline-block;
+    background-color:#ec7575;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: ghostwhite;
+    margin: 5px 0;
+    border: none;
+    cursor: pointer;
+    font-size: 2.0vh;
+    transition: 0.5s;
+    letter-spacing: 1px;
+    
+  }
+
+
+  .botonLogin:hover
   {
     background: lightskyblue;
+    transform:scale(1.05);
+  }
+  
+  .botonRechazar:hover
+  {
+    background: rgb(224, 33, 33);
+    transform:scale(1.05);
+  }
+
+  .botonAceptar:hover
+  {
+    background: rgb(21, 252, 13);
     transform:scale(1.05);
   }
   
@@ -111,9 +138,55 @@
     width: 60vw; 
     height: 60vh;  
     transform: translateY(-50%);
-    overflow: hidden;
     box-shadow: 0 30px 40px rgba(0,0,0,.3);
     
   }
 
+  .columna1 {
+    flex: 100%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: white;
+    border: solid 1px #4169E1;
+    border-radius: 5px;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.tabla {
+  height: 85%;
+  width: 100%;
+  max-height: 350px;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  text-align: center;
  
+}
+
+tbody{
+
+  tr:hover{
+      cursor: pointer;
+      background-color:#7995e9;
+  }
+}
+
+
+th{
+  font-size: 1.5em;
+}
+
+

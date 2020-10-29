@@ -4,7 +4,9 @@ import { AdminPanelComponent } from './componentes/admin/admin-panel/admin-panel
 import { LoginContenedorComponent } from './componentes/login-contenedor/login-contenedor.component';
 import { NoExisteComponent } from './componentes/no-existe/no-existe.component';
 import { HomePacienteComponent } from './componentes/paciente/home-paciente/home-paciente.component';
+import { PerfilComponent } from './componentes/perfil/perfil.component';
 import { HomeProfesionalComponent } from './componentes/profesional/home-profesional/home-profesional.component';
+import { ProfesionalNoHabilitadoComponent } from './componentes/profesional/profesional-no-habilitado/profesional-no-habilitado.component';
 import { AuthRutasGuard } from './guards/auth-rutas.guard';
 
 
@@ -14,6 +16,8 @@ const MiRuteo = [
   { path: 'profesional', component: HomeProfesionalComponent, canActivate: [AuthRutasGuard] },
   { path: 'paciente', component: HomePacienteComponent, canActivate: [AuthRutasGuard] },
   { path: 'admin', component: AdminPanelComponent, canActivate: [AuthRutasGuard] },
+  { path: 'perfilUsuario', component: PerfilComponent, canActivate: [AuthRutasGuard] },
+  { path: 'noHabilitado', component: ProfesionalNoHabilitadoComponent, canActivate: [AuthRutasGuard] },
   { path: '**', component: NoExisteComponent }];
 
 

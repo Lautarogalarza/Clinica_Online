@@ -27,6 +27,7 @@ export class RegisterComponent implements OnInit {
   foto2: any;
   fotoCargada1: any;
   fotoCargada2: any;
+  captcha:string;
 
   registroMensaje = "REGISTRO DE PACIENTE";
   mostrarProfesional = false;
@@ -45,9 +46,12 @@ export class RegisterComponent implements OnInit {
     if ((this.contraseia == null || this.contraseia == "")
       || (this.correo == null || this.correo == "")
       || (this.nombre == null || this.nombre == "")
-      || (this.apellido == null || this.apellido == "")) {
+      || (this.apellido == null || this.apellido == "") || (this.captcha==null || this.captcha=="")) {
 
       this.CargarMensaje("Faltan Datos");
+    }
+    else if (this.captcha.toLowerCase()!="w68hp") {
+      this.CargarMensaje("Captcha incorrecto");
     }
     else {
 

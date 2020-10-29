@@ -8,6 +8,27 @@
     
 }
 
+.datosCargar{
+  display: flex;
+  justify-content: space-around;
+}
+
+.datosCargar input,[type=date],[type=time],select{
+  width: 20%;
+ // padding: 10px 20px;
+  margin: 20px 0;
+  //display: in;
+  border: thin;
+  border-style: solid;
+  border-radius: 4px;
+  color:ghostwhite ;
+  border-color:#4169E1;
+  box-sizing: border-box;
+  background-color: #5981fa;
+  font-size: 2.5vh;
+  
+}
+
 .login-title{
 
     width: 100%;
@@ -58,6 +79,82 @@
   }
 
 
+  .botonLogin:hover
+  {
+    background: lightskyblue;
+    transform:scale(1.05);
+  }
+
+  .subLogin{
+
+    padding: 20px 20px;
+    margin: 8px 0;
+  }
+
+  .datosUsuario{
+
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+    justify-content:  flex-end;
+    float: right;
+    width: 90%;
+   margin-top: -28%;
+}
+
+.datosUser{
+
+      
+    width: 50%;
+    padding: 10px 20px;
+    margin: 10px 0;
+    display: block;
+    border: thin;
+    border-style: solid;
+    border-radius: 4px;
+    color: #5981fa ;
+    border-color:#4169E1;
+    box-sizing: border-box;
+    background-color: ghostwhite;
+    font-size: 2.5vh;
+  }
+
+
+label{
+
+      
+  width: 50%;
+  padding: 10px 20px;
+  margin: 20px 0;
+  display: block;
+  border: thin;
+  border-style: solid;
+  border-radius: 4px;
+  color:ghostwhite ;
+  border-color:#4169E1;
+  box-sizing: border-box;
+  background-color: #5981fa;
+  font-size: 2.5vh;
+}
+
+  .botonLogin{
+    top: 15%;
+    position: relative;
+    width: 30%;
+    display: inline-block;
+    background-color:#4169E1;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: ghostwhite;
+    //padding: 18px 24px;
+    margin: 20px 0;
+    border: none;
+    cursor: pointer;
+    font-size: 3.5vh;
+    transition: 0.5s;
+    letter-spacing: 1px;
+    
+  }
   
   .login{
     border-radius: 4px;
@@ -66,7 +163,7 @@
     position: absolute;
     top: 50%;
     width: 50vw; 
-    height: 50vh;  
+    height: 70vh;  
     transform: translateY(-50%);
     overflow: hidden;
     box-shadow: 0 30px 40px rgba(0,0,0,.3);

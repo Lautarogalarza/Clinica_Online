@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase } from '@angular/fire/database';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { AuthService } from 'src/app/servicios/auth.service';
 
 @Component({
   selector: 'app-home-profesional',
@@ -11,12 +15,17 @@ export class HomeProfesionalComponent implements OnInit {
   habilitadoCargarTurnos: boolean = false;
   habilitadoCargarAtender: boolean = false;
 
-  constructor() { }
+  usuarios: Observable<any[]>;
+  listadoUsuarios = [];
+  user;
+
+  constructor(private context: AngularFireDatabase, private auth: AuthService, private route:Router) { }
 
   ngOnInit(): void {
-
-
+  
   }
+
+ 
 
   CargarHoras() {
 
@@ -52,4 +61,5 @@ export class HomeProfesionalComponent implements OnInit {
     this.habilitadoCargarAtender = boolean;
   }
 
+  
 }

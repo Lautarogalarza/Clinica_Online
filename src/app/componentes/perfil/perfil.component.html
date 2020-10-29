@@ -1,0 +1,32 @@
+<div class="contenedor">
+    <div class="loginContenedor">
+        <div class="login">
+            <div class="login-title">
+                <span> {{user.perfil}}</span>
+            </div>
+            <div class="subLogin">
+
+                <label>NOMBRE</label>
+                <label>APELLIDO</label>
+                <label>CORREO</label>
+
+                <div class="datosUsuario">
+                    <span class="datosUser"> {{user.nombre}} </span>
+                    <span class="datosUser"> {{user.apellido}} </span>
+                    <span class="datosUser"> {{user.correo}} </span>
+                </div>
+            </div>
+
+            <div class="container grid">
+                <div>
+                </div>
+                <img class="img-fluid" [src]="foto1">
+                <img class="img-fluid" [src]="foto2">
+
+            </div>
+            
+            <button (click)='Cerrar()' class="botonCerrar">Cerrar</button>
+
+        </div>
+    </div>
+</div>

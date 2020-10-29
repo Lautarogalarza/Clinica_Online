@@ -9,13 +9,12 @@
         </thead>
 
         <tbody>
-            <tr *ngFor="let profesional of listaProfesionales">
+            <tr *ngFor="let profesional of listaProfesionales" (click)='EnviarRegistro(profesional)'>
                 <td>{{profesional.nombre}} </td>
                 <td>{{profesional.apellido}}</td>
                 <td>{{profesional.especialidades}}</td>
             </tr>
         </tbody>
-
 
     </table>
 </div>

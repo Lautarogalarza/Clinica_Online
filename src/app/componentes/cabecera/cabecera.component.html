@@ -1,0 +1,26 @@
+<div class="barra">
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+
+        <a class="navbar-brand" >
+            <img src="../../../assets/imagenes/clinicaIcono.png" width="50" height="50" alt="">
+          </a>
+          
+          <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link h2" >Clinica Online</a>
+                </li>          
+            </ul>
+        </div>
+        
+      
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+                <a  class="nav-item nav-link h3" (click)="EnviarRuta('perfilUsuario')" routerLink="" routerLinkActive="active">Perfil</a>
+                <a (click)='CerrarSesion()' class="nav-item nav-link h3" routerLink="" routerLinkActive="active">Cerrar sesion</a>
+            </ul>
+        </div>
+    </nav>
+
+</div>

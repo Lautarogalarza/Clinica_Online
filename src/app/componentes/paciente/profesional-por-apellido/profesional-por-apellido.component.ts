@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-profesional-por-apellido',
@@ -7,14 +7,19 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ProfesionalPorApellidoComponent implements OnInit {
 
-@Input() listaProfesionales: any;
-
+  @Input() listaProfesionales: any;
+  @Output() emitProfesional: EventEmitter<any> = new EventEmitter();
   constructor() {
-    
-   }
+
+  }
 
   ngOnInit(): void {
-   
+
+  }
+
+  EnviarRegistro(prof) {
+    this.emitProfesional.emit(prof);
+   // console.log(prof);
   }
 
 }

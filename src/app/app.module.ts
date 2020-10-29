@@ -30,6 +30,10 @@ import { AgregarEspecialidadComponent } from './componentes/admin/agregar-especi
 import { GestionarHorasComponent } from './componentes/profesional/gestionar-horas/gestionar-horas.component';
 import { GestionarTurnosComponent } from './componentes/profesional/gestionar-turnos/gestionar-turnos.component';
 import { AtenderPacienteComponent } from './componentes/profesional/atender-paciente/atender-paciente.component';
+import { PerfilComponent } from './componentes/perfil/perfil.component';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { ProfesionalNoHabilitadoComponent } from './componentes/profesional/profesional-no-habilitado/profesional-no-habilitado.component';
+
 
 @NgModule({
   declarations: [
@@ -52,7 +56,9 @@ import { AtenderPacienteComponent } from './componentes/profesional/atender-paci
     AgregarEspecialidadComponent,
     GestionarHorasComponent,
     GestionarTurnosComponent,
-    AtenderPacienteComponent
+    AtenderPacienteComponent,
+    PerfilComponent,
+    ProfesionalNoHabilitadoComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -64,6 +70,7 @@ import { AtenderPacienteComponent } from './componentes/profesional/atender-paci
     HttpClientModule,
     AppRoutingModule,
     NgbModule,
+    AngularFireStorageModule
     
   ],
   providers: [],

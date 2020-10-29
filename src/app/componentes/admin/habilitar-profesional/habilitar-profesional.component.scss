@@ -4,7 +4,6 @@
     outline: none;
     font-family: Oswald;
     font-size: 2vh;
-    overflow: hidden!important;
     z-index: 999999;
     
 }
@@ -59,7 +58,7 @@
   }
 
   .botonLogin{
-    top: 65%;
+    top: 5%;
     position: relative;
     width: 30%;
     display: inline-block;
@@ -141,12 +140,12 @@
   height: 85%;
   width: 100%;
   overflow: auto;
+  max-height: 350px;
 }
 
 table {
   width: 100%;
   text-align: center;
-  overflow: hidden;
 }
 
 th{

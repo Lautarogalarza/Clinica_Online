@@ -335,6 +335,32 @@ img
 
 }
 
+.inp-captcha{
+  width: 100%;
+  padding: 10px 20px;
+  margin: 10px 0;
+  display: block;
+  border: thin;
+  border-style: solid;
+  border-radius: 4px;
+  color:ghostwhite ;
+  border-color:#4169E1;
+  box-sizing: border-box;
+  background-color: #5981fa;
+  font-size: 2.5vh;
+}
+
+.captcha{
+  width: 100%;
+}
+
+.contenedorCaptcha{
+  left: 60%;
+  width: 30%;
+  position: absolute;
+  top: 70%;
+
+}
 
 .iconoQuitar{
   display: flex;
@@ -381,3 +407,6 @@ transform: scale(1);
 span.nombreEsp {
   margin-left: 10px;
 }
+
+
+

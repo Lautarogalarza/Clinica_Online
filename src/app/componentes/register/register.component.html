@@ -57,9 +57,14 @@
           </div>
         </div>
 
-
+        
       </div>
-
+      
+      <div class="contenedorCaptcha">
+        <img class="captcha" src="../../../assets/imagenes/captcha.jpg">
+        <input type="text" placeholder="Captcha" class="inp-captcha" name="captcha" [(ngModel)]="captcha"
+          maxlength="6" />
+      </div>
 
       <div class="containerFlex">
         <div *ngIf="mensaje" class="error">
