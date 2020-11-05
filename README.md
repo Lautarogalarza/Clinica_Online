@@ -35,7 +35,7 @@ _Para pedir un turno de alguno de nuestros profesionale es necesario que se siga
 
 _Como profesional tiene la responsabilidad de cargar sus horarios y en que dias de la semana trabajara, a continuacion se le mostrara como_
 
-![Horarios](https://github.com/Lautarogalarza/Clinica_Online/blob/master/Readme_Gifs/CargarHorasProf)
+![Horarios](https://github.com/Lautarogalarza/Clinica_Online/blob/master/Readme_Gifs/CargarHorasProf.gif)
 
 -----
 
