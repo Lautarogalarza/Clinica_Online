@@ -11,7 +11,7 @@
 
                 <label>NOMBRE</label>
                 <label>APELLIDO</label>
-                <label>CORREO</label>
+                <label>ESPECIALIDADADES</label>
 
                 <div class="datosUsuario">
                     <span class="datosUser"> {{profesional.nombre}} </span>
@@ -20,22 +20,32 @@
                 </div>
 
                 <div class="datosCargar">
-                    <select>
+                    <select (change)='CambiarDias($event)'>
                         <option disabled selected hidden>Dias</option>
                         <option [value]="item" *ngFor="let item of diasFiltrados">{{item}}</option>
                     </select>
-                    <select>
+                    <select (change)='CambiarEspecialidad($event)'>
                         <option disabled selected hidden>Especialidades</option>
                         <option [value]="item" *ngFor="let item of profesional.especialidades">{{item}}</option>
                     </select>
-                    <input type="time" id="horaDesde" required min="08:00" max="18:30" [(ngModel)]='hora'>
-                    <input type="date" id="horaDesde" required min="08:00" max="18:30" [(ngModel)]='fecha'>
+                    <input type="time" placeholder="Date" name="horaDesde" required min="08:00" max="18:30"
+                        [(ngModel)]='horaTurno'>
+                    <input type="date" id="fechaDesde" required [(ngModel)]='fechaTurno'>
+                </div>
 
+                <div class="containerFlex">
+                    <div *ngIf="mensaje" class="error">
+                        <span> {{mensaje}}</span>
+                    </div>
                 </div>
 
             </div>
 
-            <button class="botonLogin" (click)="Cancelar()">Cancelar</button>
+
+            <div class="botones">
+                <button class="botonLogin" (click)="CargarTurno()">Cargar</button>
+                <button class="botonLogin" (click)="Cancelar()">Cancelar</button>
+            </div>
         </div>
 
     </div>

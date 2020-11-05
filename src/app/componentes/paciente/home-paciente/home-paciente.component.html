@@ -1,4 +1,3 @@
-<app-cabecera></app-cabecera>
 
 <div class="contenedor">
 
@@ -60,7 +59,7 @@
                                 <td>{{item.profesionalCorreo}} </td>
                                 <td>{{item.area}}</td>
                                 <td><span [ngClass]="{
-                                    rechazado: item.estado == 'RECHAZADO', 
+                                    rechazado: item.estado == 'CANCELADO', 
                                     pendiente: item.estado == 'PENDIENTE', 
                                     aceptado: item.estado == 'ACEPTADO' , 
                                     atendido: item.estado == 'ATENDIDO'}">{{item.estado}}</span></td>

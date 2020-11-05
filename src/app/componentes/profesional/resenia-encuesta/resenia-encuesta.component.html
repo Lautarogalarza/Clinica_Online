@@ -1,0 +1,87 @@
+
+<div class="contenedor">
+    <div class="loginContenedor">
+        <div class="login">
+            <div class="subLogin">
+
+                <label class="labelDatos">PESO</label>
+                <label class="labelDatos">ESTATURA</label>
+                <label class="labelDatos">PRESION</label>
+                <label class="labelDatos">EDAD</label>
+                <label class="labelDatos">TEMPERATURA CORPORAL</label>
+
+                <div class="datosUsuario">
+                    <input type="number" class="datosUser" [(ngModel)]="peso">
+                    <input type="number" class="datosUser" [(ngModel)]="estatura">
+                    <input type="number" class="datosUser" [(ngModel)]="presion">
+                    <input type="number" class="datosUser" [(ngModel)]="edad">
+                    <input type="number" class="datosUser" [(ngModel)]="temperatura">
+                </div>
+
+                <div class="especialidad">
+                    <img src="../../../assets/imagenes/add.png" (click)="AgregarEspecialidades()">
+                    <div class="datosProfesional">
+                        <input type="text" class="masEspecialidad" placeholder="Nombre del dato:" [(ngModel)]="dato">
+                        <input type="text" class="masEspecialidad" placeholder="valor del dato" [(ngModel)]="datoValor">
+                    </div>
+                </div>
+
+                <div class="listadoEsp">
+                    <p class="titEsp">Datos Extra</p>
+                    <div class="espItem" *ngFor="let item of datosExtra | keyvalue">
+                        <span class="nombreEsp">{{item.key}}:{{item.value}}</span>
+                        <div class="iconoQuitar">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="containerFlex">
+                <div *ngIf="mensaje" class="error">
+                    <span> {{mensaje}}</span>
+                </div>
+            </div>
+
+            <div class="botones">
+                <button (click)='GuardarDatos()' class="botonCerrar">Guardar</button>
+                <button (click)='Cerrar()' class="botonCerrar">Cerrar</button>
+            </div>
+        </div>
+
+
+
+        <div class="encuesta" *ngIf="habilitado">
+            <div class="login-title">
+                <span> Encuesta</span>
+            </div>
+
+            <div class="encuesta-textarea">
+                <p>Ingrese un breve comentario:</p>
+                <textarea name="" id="encuesta-textarea" cols="30" rows="10" required [(ngModel)]="resenia"></textarea>
+            </div>
+            <div class="respuestas-row">
+                <div class="encuesta-radio">
+                    <p class="bold">Seleccione un nivel de satisfaccion:</p>
+                    <div class="optItem">
+                        <label for="">Muy satisfactorio</label>
+                        <input type="radio" name="group1" checked value="Muy satisfactorio"
+                            (change)="OnItemChange($event)">
+                    </div>
+                    <div class="optItem">
+                        <label for="">Satisfactorio</label>
+                        <input type="radio" name="group1" value="Satisfactorio" (change)="OnItemChange($event)">
+                    </div>
+                    <div class="optItem">
+                        <label for="">Poco satisfactorio</label>
+                        <input type="radio" name="group1" value="Poco satisfactorio" (change)="OnItemChange($event)">
+                    </div>
+                    <div class="botones2">
+                        <button (click)='CerrarEncuesta()' class="botonCerrarEncuesta">Cerrar</button>
+                        <button (click)='GuardarTurnoCompleto()' class="botonCerrarEncuesta">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>

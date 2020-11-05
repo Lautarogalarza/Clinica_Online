@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
 
   usuarios: Observable<any[]>;
   listadoUsuarios = [];
+  flag:boolean=true;
 
 
   @Output() emitRegister: EventEmitter<any> = new EventEmitter();
@@ -45,13 +46,16 @@ export class LoginComponent implements OnInit {
     let userAdmin = this.listadoUsuarios.filter(u => u.id == usuario.uid);
     if (userAdmin[0].perfil == "admin") {
       this.router.navigate(["/admin"]);
+      this.flag=false;
     }
     else if (usuario.email == "profesional@profesional.com") {
 
       this.router.navigate(["/profesional"]);
+      this.flag=false;
     }
     else if (usuario.email == "paciente@paciente.com") {
       this.router.navigate(["/paciente"]);
+      this.flag=false;
     }
 
   }
@@ -93,7 +97,11 @@ export class LoginComponent implements OnInit {
         this.ValidarUser(response);
       }
       else {
-        this.CargarMensaje("Falta verificar correo electronico");
+        if (this.flag) {
+          this.CargarMensaje("Falta verificar correo electronico");
+          this.flag=true;
+          
+        }
       }
     }).catch(error => { this.CargarMensaje(error); });
   }

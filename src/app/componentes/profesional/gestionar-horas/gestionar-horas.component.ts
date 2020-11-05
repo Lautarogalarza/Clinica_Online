@@ -22,6 +22,7 @@ export class GestionarHorasComponent implements OnInit {
   hasta;
   desdeSabado;
   hastaSabado;
+  mensaje: string;
 
   dias = {
     lunes: false,
@@ -33,6 +34,17 @@ export class GestionarHorasComponent implements OnInit {
   };
 
   duracion = 30;
+
+  CargarMensaje(mensaje: string) {
+
+    this.mensaje = mensaje;
+
+    setTimeout(() => {
+      this.mensaje = null;
+    }, 4000);
+
+  }
+
 
   ngOnInit(): void {
     this.usuarios = this.context.list('usuarios').valueChanges();
@@ -57,11 +69,11 @@ export class GestionarHorasComponent implements OnInit {
   ValidarDuracion(): boolean {
 
     if (this.duracion < 30) {
-      console.log("los turnos tienen una duracion minima de 30 minutos");
+      this.CargarMensaje("los turnos tienen una duracion minima de 30 minutos");
       return false;
     }
     else if (this.duracion > 60) {
-      console.log("los turnos tienen una duracion maxima de 60 minutos");
+      this.CargarMensaje("los turnos tienen una duracion maxima de 60 minutos");
       return false;
     }
 
@@ -77,11 +89,11 @@ export class GestionarHorasComponent implements OnInit {
 
     if (fechaDesde.getHours() < 8) {
 
-      console.log("la clinica empieza a atender a la 8")
+      this.CargarMensaje("la clinica empieza a atender a la 8")
 
     }
     else if (fechaDesde.getHours() >= 19) {
-      console.log("la clinica deja de atender a las 19")
+      this.CargarMensaje("la clinica deja de atender a las 19")
     }
     else {
 
@@ -90,7 +102,7 @@ export class GestionarHorasComponent implements OnInit {
 
 
         if (((fechaHasta.getTime() / 60000) - (fechaDesde.getTime() / 60000)) < this.duracion) {
-          console.log("La franja de horario es muy corta");
+          this.CargarMensaje("La franja de horario es muy corta");
         }
         else if (((fechaHasta.getTime() / 60000) - (fechaDesde.getTime() / 60000)) >= this.duracion) {
           return true;
@@ -101,7 +113,7 @@ export class GestionarHorasComponent implements OnInit {
       }
 
       else {
-        console.log("la clinica deja de atender a las 19")
+        this.CargarMensaje("la clinica deja de atender a las 19")
       }
     }
 
@@ -114,11 +126,11 @@ export class GestionarHorasComponent implements OnInit {
 
     if (fechaDesde.getHours() < 8) {
 
-      console.log("la clinica empieza a atender a la 8")
+      this.CargarMensaje("la clinica empieza a atender a la 8")
 
     }
     else if (fechaDesde.getHours() >= 14) {
-      console.log("la clinica deja de atender a las 14")
+      this.CargarMensaje("la clinica deja de atender a las 14")
     }
     else {
 
@@ -126,7 +138,7 @@ export class GestionarHorasComponent implements OnInit {
 
 
         if (((fechaHasta.getTime() / 60000) - (fechaDesde.getTime() / 60000)) < this.duracion) {
-          console.log("La franja de horario es muy corta");
+          this.CargarMensaje("La franja de horario es muy corta");
         }
         else if (((fechaHasta.getTime() / 60000) - (fechaDesde.getTime() / 60000)) >= this.duracion) {
           return true;
@@ -135,7 +147,7 @@ export class GestionarHorasComponent implements OnInit {
       }
 
       else {
-        console.log("la clinica deja de atender a las 14")
+        this.CargarMensaje("la clinica deja de atender a las 14")
       }
     }
 

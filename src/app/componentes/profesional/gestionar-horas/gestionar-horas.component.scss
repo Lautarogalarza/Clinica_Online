@@ -178,3 +178,30 @@ span{
   }
 
  
+  .containerFlex{
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+ 
+  
+  .error{
+    display: flex;
+    justify-content: center;
+    color: whitesmoke;
+    align-items: center;
+    position: absolute;
+    width: 50%;
+    height: 10%;
+    border-radius: 4px;
+    top:75%;
+    letter-spacing: 1px;
+    -webkit-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    background-color: rgb(240, 74, 74);
+
+    span{
+      font-size: 2.5vh;
+    }
+  }

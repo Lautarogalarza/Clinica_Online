@@ -8,9 +8,12 @@ export class Turno {
     comentarioProfesional: string;
     comentarioPaciente: string;
     idProfesional: string;
-    paciente:string;
-    idPaciente:string;
-    profesionalCorreo:string;
+    paciente: string;
+    idPaciente: string;
+    profesionalCorreo: string;
+    idTurno: string;
+    datosExtraPaciente:any[];
+    razonCancelacion:string;
 
     constructor(
         estado: string,
@@ -22,9 +25,12 @@ export class Turno {
         comentarioProfesional: string,
         comentarioPaciente: string,
         idProfesional: string,
-        paciente:string,
-        idPaciente:string,
-        profesionalCorreo
+        paciente: string,
+        idPaciente: string,
+        profesionalCorreo: string,
+        idTurno: string,
+        razonCancelacion:string
+        
     ) {
         this.estado = estado;
         this.solicitudFecha = solicitudFecha;
@@ -35,9 +41,13 @@ export class Turno {
         this.comentarioProfesional = comentarioProfesional;
         this.comentarioPaciente = comentarioPaciente;
         this.idProfesional = idProfesional
-        this.paciente= paciente;
-        this.idPaciente= idPaciente;
-        this.profesionalCorreo= profesionalCorreo;
+        this.paciente = paciente;
+        this.idPaciente = idPaciente;
+        this.profesionalCorreo = profesionalCorreo;
+        this.idTurno = idTurno;
+        this.datosExtraPaciente= [1,2,3,4,5];
+        this.razonCancelacion = razonCancelacion;
+
     }
 
 }

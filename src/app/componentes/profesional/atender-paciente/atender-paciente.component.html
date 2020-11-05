@@ -1,19 +1,41 @@
 <div class="contenedor">
     <div class="loginContenedor">
-
         <div class="login">
-
             <div class="login-title">
-
                 <h1>Atender paciente</h1>
-
             </div>
 
-     
+            <div class="columna2">
+                <div class="card">
+                    <div class="tabla">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th>Hora</th>
+                                    <th>Paciente</th>
+                                    <th>Especialidad</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr *ngFor="let item of listadoUsuarios">
+                                    <td>{{item.solicitudFecha}} </td>
+                                    <td>{{item.solicitudHora}}</td>
+                                    <td>{{item.paciente}} </td>
+                                    <td>{{item.area}}</td>
+                                    <td>{{item.correo}} </td>
+                                    <td><button class="botonRechazar" (click)="Atender(item)">Atender</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
 
             <button class="botonLogin" (click)="Cancelar()">Cancelar</button>
         </div>
-
     </div>
-
 </div>

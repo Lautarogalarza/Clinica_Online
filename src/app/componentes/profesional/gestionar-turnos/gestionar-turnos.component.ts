@@ -40,8 +40,6 @@ export class GestionarTurnosComponent implements OnInit {
       this.listaDos.push(this.listadoUsuarios[0]);
 
     }
-
-    console.log(this.listaDos);
   }
 
 
@@ -50,44 +48,17 @@ export class GestionarTurnosComponent implements OnInit {
     this.emitCancelar.emit(false);
   }
 
-  CargarTurnosBD() {
 
-    let fecha = "2020-10-29";
-    let hora = "08:00";
-    let pacienteId = "5GAnWpwbmQaDiTx3R05WlShzqZ52";
-    let especialidad = "Bromatologia";
-
-    let turno = new Turno(
-      "PENDIENTE",
-      fecha,
-      hora,
-      especialidad,
-      "",
-      "",
-      "",
-      "",
-      "TYnPXppKVdMnoQ8cyZZQg8MIu8o1",
-      "paciente@paciente.com",
-      pacienteId,
-      "profesional@profesional.com"
-
-    );
-
-    this.context.list('turnos').set(pacienteId + fecha + hora, turno);
-
-    console.log(turno);
-
-  }
 
   AceptarTurno(turno) {
-    this.context.list('turnos').update(turno.idPaciente + turno.solicitudFecha + turno.solicitudHora, {
+    this.context.list('turnos').update(turno.idTurno, {
       estado: "ACEPTADO"
     });
   }
 
   RechazarTurno(turno) {
-    this.context.list('turnos').update(turno.idPaciente + turno.solicitudFecha + turno.solicitudHora, {
-      estado: "RECHAZADO"
+    this.context.list('turnos').update(turno.idTurno, {
+      estado: "CANCELADO"
     });
   }
 

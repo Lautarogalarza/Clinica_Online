@@ -33,6 +33,7 @@ import { AtenderPacienteComponent } from './componentes/profesional/atender-paci
 import { PerfilComponent } from './componentes/perfil/perfil.component';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { ProfesionalNoHabilitadoComponent } from './componentes/profesional/profesional-no-habilitado/profesional-no-habilitado.component';
+import { ReseniaEncuestaComponent } from './componentes/profesional/resenia-encuesta/resenia-encuesta.component';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { ProfesionalNoHabilitadoComponent } from './componentes/profesional/prof
     GestionarTurnosComponent,
     AtenderPacienteComponent,
     PerfilComponent,
-    ProfesionalNoHabilitadoComponent
+    ProfesionalNoHabilitadoComponent,
+    ReseniaEncuestaComponent
   ],
   imports: [
     BrowserAnimationsModule,
