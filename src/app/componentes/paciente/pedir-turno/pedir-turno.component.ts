@@ -19,6 +19,7 @@ export class PedirTurnoComponent implements OnInit {
   diaTurno;
   especialidadTurno;
   mensaje;
+  correcto=false;
   constructor(private context: AngularFireDatabase, private afAuth: AuthService) {
 
   }
@@ -97,6 +98,7 @@ export class PedirTurnoComponent implements OnInit {
       console.log(turno);
       this.context.list('turnos').set(KeyTurno, turno);
       this.CargarMensaje("Turno pedido!!");
+      this.correcto=true;
     });
 
   }
@@ -158,6 +160,7 @@ export class PedirTurnoComponent implements OnInit {
     this.mensaje = mensaje;
     setTimeout(() => {
       this.mensaje = null;
+      this.correcto=false;
     }, 4000);
 
   }

@@ -34,7 +34,7 @@
                 </div>
 
                 <div class="containerFlex">
-                    <div *ngIf="mensaje" class="error">
+                    <div *ngIf="mensaje"  [ngClass]="{succes: correcto == true,error: correcto ==false }">
                         <span> {{mensaje}}</span>
                     </div>
                 </div>
