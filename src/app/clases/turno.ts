@@ -12,7 +12,6 @@ export class Turno {
     idPaciente: string;
     profesionalCorreo: string;
     idTurno: string;
-    datosExtraPaciente:any[];
     razonCancelacion:string;
 
     constructor(
@@ -45,7 +44,6 @@ export class Turno {
         this.idPaciente = idPaciente;
         this.profesionalCorreo = profesionalCorreo;
         this.idTurno = idTurno;
-        this.datosExtraPaciente= [1,2,3,4,5];
         this.razonCancelacion = razonCancelacion;
 
     }
