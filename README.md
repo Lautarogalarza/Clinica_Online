@@ -85,7 +85,7 @@ _Un administrador tambien tiene la posibilidad de generar nuevos administradores
 
 # Perfil
 
-_Los usuarios de la clinica tambien cuentan con un perfil donde pueden ver sus fotos y sus datos de perfil_
+_Los usuarios de la clinica tambien cuentan con una seccion donde pueden ver sus fotos y sus datos de perfil_
 
 ![Cargar nuevo Admin](https://github.com/Lautarogalarza/Clinica_Online/blob/master/Readme_Gifs/Perfil.gif)
 
