@@ -2,7 +2,7 @@
 
 _Bienvenidos a la clinica online, este instructivo les ayudara a recibir toda la atencion necesaria donde sea_
 
-# Como registrarse 🧑🏽
+# Como registrarse 
 
 _El primer paso a seguir para comenzar a usar la clinica es crearse una cuenta_
 
@@ -23,15 +23,15 @@ _Para pedir un turno de alguno de nuestros profesionale es necesario que se siga
 
 ![Obtener turno](https://github.com/Lautarogalarza/Clinica_Online/blob/master/Readme_Gifs/PedirTurno.gif)
 ```
-1.El paciente se dirige a la sección Pedir Turno 📄 En ella se encuentran todos los profesionales capacitados para brindar atencion.
-2.Selecciona al profesional que más te convenga según tu disposición horaria o la especialidad que deseas 👩🏽‍⚕️.
-3.Para finalizar carga el dia, la hora y la especialidad con la que quiere ser atendido para dar de alta a su turno⏰.
+1.El paciente se dirige a la sección Pedir Turno  En ella se encuentran todos los profesionales capacitados para brindar atencion.
+2.Selecciona al profesional que más te convenga según tu disposición horaria o la especialidad que deseas .
+3.Para finalizar carga el dia, la hora y la especialidad con la que quiere ser atendido para dar de alta a su turno.
 ```
 
 -----
 
-# Profesional 👩🏽‍⚕️
-# Elija sus horarios ⏰
+# Profesional 
+# Elija sus horarios 
 
 _Como profesional tiene la responsabilidad de cargar sus horarios y en que dias de la semana trabajara, a continuacion se le mostrara como_
 
