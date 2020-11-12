@@ -24,8 +24,9 @@ _Para pedir un turno de alguno de nuestros profesionale es necesario que se siga
 ![Obtener turno](https://github.com/Lautarogalarza/Clinica_Online/blob/master/Readme_Gifs/PedirTurno.gif)
 ```
 1.El paciente se dirige a la sección Pedir Turno  En ella se encuentran todos los profesionales capacitados para brindar atencion.
-2.Selecciona al profesional que más te convenga según tu disposición horaria o la especialidad que deseas .
-3.Para finalizar carga el dia, la hora y la especialidad con la que quiere ser atendido para dar de alta a su turno.
+2.Selecciona La especialidad del profesional que nesecita seguido de esto elija el profesional correspondiente.
+3.Una vez elegido el profesional le le desplegara una tabla con los horarios y los dias en los cuales ese profesional atiende.
+4.Al seleccionar el turno correspondiente ya estara pedido y pendiente a la aceptacion del profesional.
 ```
 
 -----
