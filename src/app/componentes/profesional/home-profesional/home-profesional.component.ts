@@ -14,18 +14,24 @@ export class HomeProfesionalComponent implements OnInit {
   habilitadoCargarHoras: boolean = false;
   habilitadoCargarTurnos: boolean = false;
   habilitadoCargarAtender: boolean = false;
+  habilitadoCargarHistorial: boolean = false;
 
   usuarios: Observable<any[]>;
   listadoUsuarios = [];
   user;
 
-  constructor(private context: AngularFireDatabase, private auth: AuthService, private route:Router) { }
+  constructor(private context: AngularFireDatabase, private auth: AuthService, private route: Router) { }
 
   ngOnInit(): void {
-  
+
   }
 
- 
+  CargarHistorial() {
+    this.habilitadoCargarHistorial = true;
+    this.habilitadoCargarHoras = false;
+    this.habilitadoCargarTurnos = false;
+    this.habilitadoCargarAtender = false;
+  }
 
   CargarHoras() {
 
@@ -43,7 +49,7 @@ export class HomeProfesionalComponent implements OnInit {
   }
 
   CargarAtender() {
-  
+
     this.habilitadoCargarAtender = true;
     this.habilitadoCargarTurnos = false;
     this.habilitadoCargarHoras = false;
@@ -61,5 +67,9 @@ export class HomeProfesionalComponent implements OnInit {
     this.habilitadoCargarAtender = boolean;
   }
 
-  
+  CancelarAtenderHistorial(boolean){
+    this.habilitadoCargarHistorial = boolean;
+  }
+
+
 }

@@ -23,13 +23,20 @@
 
     </div>
 
-    <div class="encuesta-textarea">
+    <div class="encuesta-textarea" *ngIf="esPaciente">
         <p>Reseña del profesional:</p>
         <textarea  [(ngModel)]="turno.comentarioProfesional" name="" id="encuesta-textarea" cols="30" rows="10" disabled ></textarea>
+        <p>{{turno.encuestaProfesional}}</p>
+    </div>
+
+    <div class="encuesta-textarea" *ngIf="esProfesional">
+        <p>Reseña del paciente:</p>
+        <textarea  [(ngModel)]="turno.comentarioPaciente" name="" id="encuesta-textarea" cols="30" rows="10" disabled ></textarea>
+        <p>{{turno.encuestaPaciente}}</p>
     </div>
 
     <div class="botones2" *ngIf="botonesHabilitados">
-        <button (click)="AceptarEncuesta()" class="botonCerrarEncuesta">Dejar una reseña propia</button>
+        <button *ngIf="esPaciente" (click)="AceptarEncuesta()" class="botonCerrarEncuesta">Dejar una reseña propia</button>
         <button (click)="CancelarTurnoRechazado()" class="botonCerrarEncuesta">Cerrar</button>
     </div>
 

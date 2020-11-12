@@ -1,0 +1,62 @@
+<div class="contenedor">
+    <div class="loginContenedor">
+        <div class="login">
+            <div class="login-title">
+                <h1>Gestionar Turnos</h1>
+            </div>
+            <div class="columna2">
+                <div class="card">
+                    <div class="tabla" >
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th>Hora</th>
+                                    <th>Paciente</th>
+                                    <th>Estado</th>
+                                    <th>Especialidad</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr *ngFor="let item of listadoUsuarios">
+                                    <td>{{item.solicitudFecha}} </td>
+                                    <td>{{item.solicitudHora}}</td>
+                                    <td>{{item.paciente}} </td>
+                                    <td><span [ngClass]="{
+                                        cancelado: item.estado == 'CANCELADO', 
+                                        pendiente: item.estado == 'PENDIENTE', 
+                                        aceptado: item.estado == 'ACEPTADO' , 
+                                        atendido: item.estado == 'ATENDIDO',
+                                        rechazado: item.estado == 'RECHAZADO'}">{{item.estado}}</span></td>
+                                    <td>{{item.area}}</td>
+                                    <td>{{item.correo}} </td>
+                                     <td *ngIf="item.estado == 'ATENDIDO'  "><button (click)="VerTurnoAceptado(item)" class="botonRechazar">Ver</button></td>
+                                <td *ngIf="item.estado == 'RECHAZADO' "><button (click)="VerTurnoCanceladoRechazado(item)" class="botonRechazar">Ver</button></td>
+                                <td *ngIf="item.estado == 'CANCELADO' "><button (click)="VerTurnoCanceladoRechazado(item)" class="botonRechazar">Ver</button></td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+            <button *ngIf="rechazoCancelacion" class="botonLogin" (click)="Cancelar()">Cancelar</button>
+        </div>
+  
+
+        <div class="verTurnoCancelado" *ngIf="verCanceladoTurnoHabilitado" >
+            <app-ver-turno-cancelado-rechazado [turno]='turno' (emitCancelar)="TurnoRechazadoCancelar($event)"></app-ver-turno-cancelado-rechazado>
+          </div>
+
+          <div class="verTurnoAtendidoAceptado" *ngIf="verAceptadoTurnoHabilitado"  >
+            <app-ver-turno-aceptado [turno]='turno' [esPaciente]='false' 
+            [esProfesional]='true'
+             (emitCancelar)="TurnoRechazadoCancelar($event)"></app-ver-turno-aceptado>
+        </div>
+
+    </div>
+
+</div>

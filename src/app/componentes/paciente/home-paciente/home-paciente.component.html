@@ -85,7 +85,10 @@
 </div>
 
 <div class="verTurnoAtendidoAceptado" *ngIf="verAceptadoTurnoHabilitado"  >
-    <app-ver-turno-aceptado [turno]='turno' (emitCancelar)="TurnoRechazadoCancelar($event)"></app-ver-turno-aceptado>
+    <app-ver-turno-aceptado [turno]='turno' 
+    [esPaciente]='true' 
+            [esProfesional]='false'
+    (emitCancelar)="TurnoRechazadoCancelar($event)"></app-ver-turno-aceptado>
 </div>
 
 <div class="pedirTurno" *ngIf="pedirTurno">

@@ -40,6 +40,7 @@ import { VerTurnoAceptadoComponent } from './componentes/paciente/ver-turno-acep
 import { VerTurnoCanceladoRechazadoComponent } from './componentes/paciente/ver-turno-cancelado-rechazado/ver-turno-cancelado-rechazado.component';
 import { EncuestaReseniaComponent } from './componentes/profesional/encuesta-resenia/encuesta-resenia.component';
 import { HistoriaClinicaCargarComponent } from './componentes/profesional/historia-clinica-cargar/historia-clinica-cargar.component';
+import { HistorialTurnosComponent } from './componentes/profesional/historial-turnos/historial-turnos.component';
 
 
 @NgModule({
@@ -71,7 +72,8 @@ import { HistoriaClinicaCargarComponent } from './componentes/profesional/histor
     VerTurnoAceptadoComponent,
     VerTurnoCanceladoRechazadoComponent,
     EncuestaReseniaComponent,
-    HistoriaClinicaCargarComponent
+    HistoriaClinicaCargarComponent,
+    HistorialTurnosComponent
   ],
   imports: [
     BrowserAnimationsModule,

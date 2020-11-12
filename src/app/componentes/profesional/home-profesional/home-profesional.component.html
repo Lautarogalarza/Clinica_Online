@@ -5,6 +5,7 @@
             <button class="botonLogin" (click)='CargarHoras()'>Gestionar horarios</button>
             <button class="botonLogin" (click)='CargarTurnos()'>Gestionar turnos</button>
             <button class="botonLogin" (click)='CargarAtender()'>Atender pacientes</button>
+            <button class="botonLogin" (click)='CargarHistorial()'>Historial de turnos</button>
         </div>
 
         <div class="componentes">
@@ -19,6 +20,10 @@
 
             <div class="AtenderPaciente" *ngIf="habilitadoCargarAtender">
                 <app-atender-paciente (emitCancelar)='CancelarAtender($event)'></app-atender-paciente>
+            </div>
+
+            <div class="HistorialTurnos" *ngIf="habilitadoCargarHistorial">           
+               <app-historial-turnos (emitCancelar)='CancelarAtenderHistorial($event)' ></app-historial-turnos>
             </div>
 
         </div>

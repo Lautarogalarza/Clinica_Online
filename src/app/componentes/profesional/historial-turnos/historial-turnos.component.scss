@@ -1,0 +1,234 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    outline: none;
+    font-family: Oswald;
+    font-size: 2vh;
+    z-index: 999999;
+    
+}
+
+.login-title{
+
+    width: 100%;
+    height: 10%;
+    background: #4169E1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: thin;
+    border-style: solid;
+    border-color:#4169E1;
+    h1{
+      font-size: 5vh;
+      color: white;
+     font-family: "Arial Narrow", Arial, "Helvetica Condensed", Helvetica, sans-serif;
+     letter-spacing: 2px;
+     
+    }
+  
+  }
+
+.loginContenedor{
+    width: 150vw;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+          animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        
+  }
+
+  @-webkit-keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .botonLogin{
+    top: 5%;
+    position: relative;
+    width: 30%;
+    display: inline-block;
+    background-color:#4169E1;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: ghostwhite;
+    //padding: 18px 24px;
+    margin: 20px 0;
+    border: none;
+    cursor: pointer;
+    font-size: 3.5vh;
+    transition: 0.5s;
+    letter-spacing: 1px;
+    
+  }
+
+  .botonAceptar{
+    position: relative;
+    width: 85%;
+    display: inline-block;
+    background-color:#6fb454;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: ghostwhite;
+    margin: 5px 0;
+    border: none;
+    cursor: pointer;
+    font-size: 2.0vh;
+    transition: 0.5s;
+    letter-spacing: 1px;
+    
+  }
+
+  .botonRechazar{
+    position: relative;
+    width: 90%;
+    display: inline-block;
+    background-color:#1b28d8;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: ghostwhite;
+    margin: 5px 0;
+    border: none;
+    cursor: pointer;
+    font-size: 2.0vh;
+    transition: 0.5s;
+    letter-spacing: 1px;
+    
+  }
+
+
+  .botonLogin:hover
+  {
+    background: lightskyblue;
+    transform:scale(1.05);
+  }
+  
+  .botonRechazar:hover
+  {
+    background: lightskyblue;
+    transform:scale(1.05);
+  }
+
+  .botonAceptar:hover
+  {
+    background: rgb(21, 252, 13);
+    transform:scale(1.05);
+  }
+  
+  .login{
+    border-radius: 4px;
+    text-align: center;
+    background: ghostwhite;
+    position: absolute;
+    top: 45%;
+    width: 60vw; 
+    height: 70vh;  
+    transform: translateY(-50%);
+    box-shadow: 0 30px 40px rgba(0,0,0,.3);
+    
+  }
+
+  .columna1 {
+    flex: 100%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: white;
+    border: solid 1px #4169E1;
+    border-radius: 5px;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.tabla {
+  height: 85%;
+  width: 100%;
+  max-height: 350px;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+ 
+}
+
+tbody{
+
+  tr:hover{
+      cursor: pointer;
+      background-color:#7995e9;
+  }
+}
+
+
+th{
+  font-size: 1.5em;
+}
+
+
+.RechazarTurno{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -30%;
+  position: relative;
+}
+
+.aceptado{
+  background-color: green;
+  color: white; 
+}
+
+.pendiente{
+  background-color: grey;
+  color: white; 
+}
+
+.atendido{
+  background-color: orange;
+  color: white; 
+}
+
+.cancelado{
+  background-color: red;
+color: white; 
+}
+
+
+.rechazado{
+background-color: red;
+color: white; 
+}
+
+.verTurnoAtendidoAceptado{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 10%;
+  left: 20%;
+  position: absolute;
+}

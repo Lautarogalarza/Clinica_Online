@@ -14,6 +14,8 @@ export class VerTurnoAceptadoComponent implements OnInit {
   encuestaResultado = "Muy satisfactorio";
   botonesHabilitados:boolean=true;
   EncuestaHabilitada:boolean=false;
+  @Input() esProfesional:boolean;
+  @Input() esPaciente:boolean;
 
   
   constructor(private context:AngularFireDatabase) { }
