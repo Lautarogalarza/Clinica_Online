@@ -18,7 +18,14 @@ export class HomePacienteComponent implements OnInit {
   listadoProfesionales = [];
   listaTurnos = [];
   profesional;
+  profesionalesParaTurno=[];
   pedirTurno: boolean = false;
+  especialidad;
+  cancelarTurnoHabilitado: boolean = false;
+  rechazoCancelacion: boolean = true;
+  turno;
+  verCanceladoTurnoHabilitado:boolean = false;
+  verAceptadoTurnoHabilitado:boolean = false;
 
   ngOnInit(): void {
     this.usuarios = this.context.list('usuarios').valueChanges();
@@ -39,7 +46,7 @@ export class HomePacienteComponent implements OnInit {
   }
 
   TomarProfesional(event) {
-    this.profesional=event;
+    this.profesionalesParaTurno=event;
     this.pedirTurno = true;
   }
 
@@ -52,6 +59,36 @@ export class HomePacienteComponent implements OnInit {
     this.pedirTurno = boolean;
 
   }
+
+  TomarEspecialidad(event){
+    this.especialidad=event;
+  }
+
+  CancelarTurno(turno){
+    this.cancelarTurnoHabilitado = true;
+    this.rechazoCancelacion = false;
+    this.turno=turno
+  }
+
+  TurnoRechazadoCancelar(boolean){
+    this.cancelarTurnoHabilitado = boolean;
+    this.verCanceladoTurnoHabilitado = boolean;
+    this.verAceptadoTurnoHabilitado = boolean;
+    this.rechazoCancelacion = true;
+  }
+
+  VerTurnoAceptado(turno){
+    this.verAceptadoTurnoHabilitado = true;
+    this.rechazoCancelacion = false;
+    this.turno=turno
+  }
+
+  VerTurnoCanceladoRechazado(turno){
+    this.verCanceladoTurnoHabilitado = true;
+    this.rechazoCancelacion = false;
+    this.turno=turno
+  }
+
 
 
 

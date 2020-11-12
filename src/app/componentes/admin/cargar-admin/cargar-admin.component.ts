@@ -16,6 +16,8 @@ export class CargarAdminComponent implements OnInit {
   listadoUsuarios = [];
   correo: string;
   contrasenia: string;
+  nombre:string;
+  apellido:string;
   mensaje: string;
 
   constructor(private context: AngularFireDatabase, private authService: AuthService, private userService: UsuarioBDService) { }
@@ -31,14 +33,18 @@ export class CargarAdminComponent implements OnInit {
 
 
   Register() {
-    if ((this.contrasenia == null || this.contrasenia == "") || (this.correo == null || this.correo == "")) {
+    if ((this.contrasenia == null || this.contrasenia == "") 
+    || (this.correo == null || this.correo == "")
+    || (this.nombre == null || this.nombre == "")
+    || (this.apellido == null || this.apellido == "")) {
 
       this.CargarMensaje("Faltan Datos");
     }
     else {
       this.authService.Register(this.correo, this.contrasenia).then(response => {
         this.Cancelar();
-        let admin = new Admin(this.correo);
+        let admin = new Admin(this.correo,this.nombre,this.apellido);
+        console.log(admin);
         this.userService.RegistrarAdmin(admin);
       }).catch(error => { this.CargarMensaje(error); });
 

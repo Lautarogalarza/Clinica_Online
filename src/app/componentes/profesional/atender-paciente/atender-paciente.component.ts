@@ -15,7 +15,10 @@ export class AtenderPacienteComponent implements OnInit {
   @Output() emitCancelar: EventEmitter<any> = new EventEmitter();
   usuarios: Observable<any[]>;
   listadoUsuarios = [];
+  cancelarTurnoHabilitado: boolean = false;
+  rechazoCancelacion: boolean = true;
   listaDos = [];
+  turno;
   constructor(private context: AngularFireDatabase, private authService: AuthService, private router:Router,private turnoService:TurnosService) { }
 
   ngOnInit(): void {
@@ -40,6 +43,16 @@ export class AtenderPacienteComponent implements OnInit {
     this.router.navigate(['/atencion'])
   }
 
+  CancelarTurno(turno){
+    this.cancelarTurnoHabilitado = true;
+    this.rechazoCancelacion = false;
+    this.turno=turno
+  }
+
+  TurnoRechazadoCancelar(boolean){
+    this.cancelarTurnoHabilitado = boolean;
+    this.rechazoCancelacion = true;
+  }
 
   Cancelar() {
 

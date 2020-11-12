@@ -1,53 +1,62 @@
-<div class="container">
-    <div class="loginContenedor">
+<div class="loginContenedor">
+    <div class="login">
+        <div class="login-title">
+            <h1>Pedir Turno</h1>
+        </div>
+        <div class="tabla">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Profesionales</th>
+                    </tr>
+                </thead>
 
-        <div class="login">
+                <tbody>
+                    <tr *ngFor="let profesional of profesionales" (click)="BuscarTurno(profesional)">
+                        <td>{{profesional.nombre}} {{profesional.apellido}} </td>
+                    </tr>
+                </tbody>
 
-            <div class="login-title">
-                <h1>Pedir Turno</h1>
-            </div>
-
-            <div class="subLogin" *ngIf="profesional">
-
-                <label>NOMBRE</label>
-                <label>APELLIDO</label>
-                <label>ESPECIALIDADADES</label>
-
-                <div class="datosUsuario">
-                    <span class="datosUser"> {{profesional.nombre}} </span>
-                    <span class="datosUser"> {{profesional.apellido}} </span>
-                    <span class="datosUser"> {{profesional.especialidades}} </span>
-                </div>
-
-                <div class="datosCargar">
-                    <select (change)='CambiarDias($event)'>
-                        <option disabled selected hidden>Dias</option>
-                        <option [value]="item" *ngFor="let item of diasFiltrados">{{item}}</option>
-                    </select>
-                    <select (change)='CambiarEspecialidad($event)'>
-                        <option disabled selected hidden>Especialidades</option>
-                        <option [value]="item" *ngFor="let item of profesional.especialidades">{{item}}</option>
-                    </select>
-                    <input type="time" placeholder="Date" name="horaDesde" required min="08:00" max="18:30"
-                        [(ngModel)]='horaTurno'>
-                    <input type="date" id="fechaDesde" required [(ngModel)]='fechaTurno'>
-                </div>
-
-                <div class="containerFlex">
-                    <div *ngIf="mensaje"  [ngClass]="{succes: correcto == true,error: correcto ==false }">
-                        <span> {{mensaje}}</span>
-                    </div>
-                </div>
-
-            </div>
-
-
-            <div class="botones">
-                <button class="botonLogin" (click)="CargarTurno()">Cargar</button>
-                <button class="botonLogin" (click)="Cancelar()">Cancelar</button>
-            </div>
+            </table>
         </div>
 
+            <div class="pedirTurno" *ngIf="mostrarTurnos">
+                <h1>Turnos Disponibles</h1>
+                <div class="columna" >      
+                    <div class="card">
+                        <div class="tabla2">
+                            <table >
+                                <thead>
+                                    <tr>
+                                        <th>Dia</th>
+                                        <th>Fecha</th>
+                                        <th>Hora</th>
+                                    </tr>
+                                </thead>
+    
+                                <tbody>
+                                    <tr *ngFor="let turno of listaTurnos"  (click)="CrearTurno(turno)" >
+                                        <td>{{turno.dia}}</td>
+                                        <td>{{turno.fecha}}</td>
+                                        <td>{{turno.hora}}</td>
+                                    </tr>
+                                </tbody>
+    
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="containerFlex">
+                <div *ngIf="mensaje"  [ngClass]="{succes: correcto == true,error: correcto ==false }">
+                    <span> {{mensaje}}</span>
+                </div>
+            </div>
+
+        <div class="botones">
+            <button class="botonLogin" (click)="Cancelar()">Cancelar</button>
+        </div>
     </div>
 
 </div>

@@ -100,8 +100,84 @@ tr:hover{
     color: white; 
 }
 
+.cancelado{
+    background-color: red;
+color: white; 
+}
+
 
 .rechazado{
 background-color: red;
 color: white; 
 }
+
+.botonVer{
+    position: relative;
+    width: 85%;
+    display: inline-block;
+    background-color:#4169E1;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: ghostwhite;
+    margin: 5px 0;
+    border: none;
+    cursor: pointer;
+    font-size: 2.0vh;
+    transition: 0.5s;
+    letter-spacing: 1px;
+    
+  }
+  .botonVer:hover
+  {
+    background: lightskyblue;
+    transform:scale(1.05);
+  } 
+  
+  .botonCancelar{
+    position: relative;
+    width: 85%;
+    display: inline-block;
+    background-color:#fd3657;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: ghostwhite;
+    margin: 5px 0;
+    border: none;
+    cursor: pointer;
+    font-size: 2.0vh;
+    transition: 0.5s;
+    letter-spacing: 1px;
+    
+  }
+  .botonCancelar:hover
+  {
+    background: rgb(224, 130, 130);
+    transform:scale(1.05);
+  }  
+
+  .cancelarTurno{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 35%;
+    left: 35%;
+    position: absolute;
+  }
+
+  .verTurnoAtendidoAceptado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 13%;
+    left: 23%;
+    position: absolute;
+  }
+  
+  .verTurnoCancelado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 35%;
+    left: 35%;
+    position: absolute;
+  }

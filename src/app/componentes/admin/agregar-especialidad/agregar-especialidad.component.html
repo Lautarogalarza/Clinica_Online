@@ -1,12 +1,8 @@
-<!--<div class="contenedor">
+<div class="contenedor">
     <div class="loginContenedor">
-
         <div class="login">
-
             <div class="login-title">
-
-                <h1>HABILITAR PROFESIONAL</h1>
-
+                <h1>AGREGAR ESPECIALIDAD PROFESIONAL</h1>
             </div>
 
             <div class="columna2">
@@ -17,7 +13,7 @@
                                 <tr>
                                     <th>Profesional</th>
                                     <th>Especialidades</th>
-                                    <th>Estado</th>
+                                    <th>Accion</th>
                                 </tr>
                             </thead>
 
@@ -25,8 +21,9 @@
                                 <tr *ngFor="let item of listadoUsuarios">
                                     <td>{{item.correo}} </td>
                                     <td>{{item.especialidades}}</td>
-                                    <td><button class="botonActivar" (click)="ActivarProfesional(item)">Activar</button> </td>
+                                    <td><button class="botonActivar" (click)="AgregarEspecialidad(item)">Cargar</button> </td>
                                 </tr>
+                               
                             </tbody>
 
                         </table>
@@ -34,9 +31,23 @@
                 </div>
             </div>
 
+         <!--   <div class="especialidad">
+                <img src="../../../assets/imagenes/add.png" (click)="AgregarEspecialidades()">
+                <div class="datosProfesional">                
+                    <input type="text" class="masEspecialidad" placeholder="Especialidad" [(ngModel)]="datoValor">
+                </div>
+            </div>
+
+            <div class="listadoEsp">
+                <p class="titEsp">Especialidades</p>
+                <div class="espItem" *ngFor="let item of datosExtra | keyvalue">
+                    <span class="nombreEsp">{{item.key}}:{{item.value}}</span>
+                    <div class="iconoQuitar">
+                    </div>
+                </div>
+            </div>-->
+            
             <button class="botonLogin" (click)="Cancelar()">Cancelar</button>
         </div>
-
     </div>
-
-</div>-->
+</div>

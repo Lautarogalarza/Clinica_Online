@@ -1,0 +1,42 @@
+<div class="encuesta">
+    <div class="login-title">
+        <span> Turno del: {{turno.solicitudFecha}} </span>
+    </div>
+
+    <h1>Historia clinica</h1>
+
+    <label>Peso</label>
+    <label>Edad</label>
+    <label>Temperatura corporal</label>
+    <label>Presion</label>
+    <label>Estura</label>
+    
+    
+
+    <div class="datosUsuario">
+        <span class="datosUser"> {{turno.datosPaciente.Edad}} </span>
+        <span class="datosUser"> {{turno.datosPaciente.Estatura}} </span>
+        <span class="datosUser"> {{turno.datosPaciente.Peso}} </span>
+        <span class="datosUser"> {{turno.datosPaciente.Presion}} </span>
+        <span class="datosUser"> {{turno.datosPaciente.Presion}} </span>
+        
+
+    </div>
+
+    <div class="encuesta-textarea">
+        <p>Reseña del profesional:</p>
+        <textarea  [(ngModel)]="turno.comentarioProfesional" name="" id="encuesta-textarea" cols="30" rows="10" disabled ></textarea>
+    </div>
+
+    <div class="botones2" *ngIf="botonesHabilitados">
+        <button (click)="AceptarEncuesta()" class="botonCerrarEncuesta">Dejar una reseña propia</button>
+        <button (click)="CancelarTurnoRechazado()" class="botonCerrarEncuesta">Cerrar</button>
+    </div>
+
+    
+ </div>
+
+ <div class="habilitado" *ngIf="EncuestaHabilitada">
+
+     <app-encuesta-resenia [turno]='turno' (emitCancelar)="TurnoRechazadoCancelar()"></app-encuesta-resenia>
+ </div>

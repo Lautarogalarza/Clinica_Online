@@ -4,30 +4,11 @@
     outline: none;
     font-family: Oswald;
     font-size: 2vh;
-    overflow: hidden!important;
+ 
     
 }
 
-.datosCargar{
-  display: flex;
-  justify-content: space-around;
-}
 
-.datosCargar input,[type=date],[type=time],select{
-  width: 20%;
- // padding: 10px 20px;
-  margin: 20px 0;
-  //display: in;
-  border: thin;
-  border-style: solid;
-  border-radius: 4px;
-  color:ghostwhite ;
-  border-color:#4169E1;
-  box-sizing: border-box;
-  background-color: #5981fa;
-  font-size: 2.5vh;
-  
-}
 
 .login-title{
 
@@ -91,51 +72,15 @@
     margin: 8px 0;
   }
 
-  .datosUsuario{
+  .subLogin2{
 
+    width: 50vw;
     display: flex;
-    flex-flow: column;
-    align-items: flex-end;
-    justify-content:  flex-end;
-    float: right;
-    width: 90%;
-   margin-top: -28%;
-}
-
-.datosUser{
-
-      
-    width: 50%;
-    padding: 10px 20px;
-    margin: 10px 0;
-    display: block;
-    border: thin;
-    border-style: solid;
-    border-radius: 4px;
-    color: #5981fa ;
-    border-color:#4169E1;
-    box-sizing: border-box;
-    background-color: ghostwhite;
-    font-size: 2.5vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
-
-label{
-
-      
-  width: 50%;
-  padding: 10px 20px;
-  margin: 20px 0;
-  display: block;
-  border: thin;
-  border-style: solid;
-  border-radius: 4px;
-  color:ghostwhite ;
-  border-color:#4169E1;
-  box-sizing: border-box;
-  background-color: #5981fa;
-  font-size: 2.5vh;
-}
 
   .botonLogin{
     top: 15%;
@@ -193,7 +138,7 @@ label{
     width: 50%;
     height: 10%;
     border-radius: 4px;
-    top:85%;
+    top:20%;
     letter-spacing: 1px;
     -webkit-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
             animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -215,7 +160,7 @@ label{
     width: 50%;
     height: 10%;
     border-radius: 4px;
-    top:85%;
+    top:20%;
     letter-spacing: 1px;
     -webkit-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
             animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -225,3 +170,120 @@ label{
       font-size: 2.5vh;
     }
   }
+
+  .tabla {
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    table {
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+    }
+    
+    th{
+        font-size: 2.5em;
+    }
+    
+    tbody{
+        tr:hover{
+            cursor: pointer;
+            background-color:#7995e9;
+        }
+        td{
+          font-size: 3vh;
+        }
+    }
+}
+
+.pedirTurno{
+  margin-top: 3%;
+  h1{
+    font-size: 2.5em;
+  }
+
+}
+
+.tabla2 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  
+  table {
+      width: 100%;
+      text-align: center;
+  }
+  
+  th{
+      font-size: 1.5em;
+ 
+  }
+
+  thead{
+    position: sticky; 
+    top: 0;
+  }
+  
+  tbody{
+      tr:hover{
+          cursor: pointer;
+          background-color:#7995e9;
+      }
+      td{
+        font-size: 2vh;
+      }
+  }
+}
+
+
+
+
+.cuerpo {
+  
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.columna1 {
+  flex: 100%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.columna{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 100%;
+  height: 100%;
+  width: 100%;
+ 
+
+}
+
+
+.card {
+  max-height: 250px;
+  overflow: auto;
+  background: white;
+  border: solid 1px #4169E1;
+  border-radius: 5px;
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+

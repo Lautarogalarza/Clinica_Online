@@ -42,6 +42,8 @@ export class UsuarioBDService {
       this.context.list('usuarios').set(response.uid,
         {
           correo: usuario.correo,
+          nombre: usuario.nombre,
+          apellido: usuario.apellido,
           id: response.uid,
           perfil: "admin"
         });

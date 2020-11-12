@@ -1,4 +1,3 @@
-
 <div class="contenedor">
 
 
@@ -10,22 +9,16 @@
                     <span>Pedir Turno</span>
                 </div>
                 <div class="tabla">
-                    <table>
-                        <tr>
-                            <th>Apellido</th>
-                            <th>Especialidad</th>
-                            <th>Semana</th>
-                        </tr>
-                        <!-- <app-profesional-por-dia></app-profesional-por-dia> -->
-                    </table>
-                    <div class="profesionalPorApellido" *ngIf="true">
+
+                    <div class="profesionalPorApellido" *ngIf="false">
                         <app-profesional-por-apellido (emitProfesional)='TomarProfesional($event)'
                             [listaProfesionales]='listadoProfesionales'>
                         </app-profesional-por-apellido>
                     </div>
 
-                    <div class="profesionalPorEspecialidad" *ngIf="false">
-                        <app-profesional-por-especialidad [listaProfesionales]='listadoProfesionales'>
+                    <div class="profesionalPorEspecialidad" *ngIf="true">
+                        <app-profesional-por-especialidad (emitEspecialidad)='TomarEspecialidad($event)'
+                            (emitProfesional)='TomarProfesional($event)' [listaProfesionales]='listadoProfesionales'>
                         </app-profesional-por-especialidad>
                     </div>
 
@@ -59,10 +52,16 @@
                                 <td>{{item.profesionalCorreo}} </td>
                                 <td>{{item.area}}</td>
                                 <td><span [ngClass]="{
-                                    rechazado: item.estado == 'CANCELADO', 
+                                    cancelado: item.estado == 'CANCELADO', 
                                     pendiente: item.estado == 'PENDIENTE', 
                                     aceptado: item.estado == 'ACEPTADO' , 
-                                    atendido: item.estado == 'ATENDIDO'}">{{item.estado}}</span></td>
+                                    atendido: item.estado == 'ATENDIDO',
+                                    rechazado: item.estado == 'RECHAZADO'}">{{item.estado}}</span></td>
+                                <td *ngIf="item.estado == 'PENDIENTE' || item.estado == 'ACEPTADO'  "><button
+                                        class="botonCancelar" (click)="CancelarTurno(item)">Cancelar</button></td>
+                                <td *ngIf="item.estado == 'ATENDIDO'  "><button (click)="VerTurnoAceptado(item)" class="botonVer">Ver</button></td>
+                                <td *ngIf="item.estado == 'RECHAZADO' "><button (click)="VerTurnoCanceladoRechazado(item)" class="botonVer">Ver</button></td>
+                                <td *ngIf="item.estado == 'CANCELADO' "><button (click)="VerTurnoCanceladoRechazado(item)" class="botonVer">Ver</button></td>
                             </tr>
                         </tbody>
 
@@ -70,12 +69,26 @@
                 </div>
             </div>
         </div>
-
-
+        
+        
     </div>
-
-
+    
+    
 </div>
+
+<div class="cancelarTurno" *ngIf="cancelarTurnoHabilitado">
+    <app-cancelar-turno [turno]='turno' (emitCancelar)="TurnoRechazadoCancelar($event)"></app-cancelar-turno>
+</div>
+
+<div class="verTurnoCancelado" *ngIf="verCanceladoTurnoHabilitado" >
+  <app-ver-turno-cancelado-rechazado [turno]='turno' (emitCancelar)="TurnoRechazadoCancelar($event)"></app-ver-turno-cancelado-rechazado>
+</div>
+
+<div class="verTurnoAtendidoAceptado" *ngIf="verAceptadoTurnoHabilitado"  >
+    <app-ver-turno-aceptado [turno]='turno' (emitCancelar)="TurnoRechazadoCancelar($event)"></app-ver-turno-aceptado>
+</div>
+
 <div class="pedirTurno" *ngIf="pedirTurno">
-    <app-pedir-turno [profesional]='profesional' (emitCancelar)='Cancelar($event)'></app-pedir-turno>
+    <app-pedir-turno [profesionales]='profesionalesParaTurno' [especialidadTurno]='especialidad'
+        (emitCancelar)='Cancelar($event)'></app-pedir-turno>
 </div>

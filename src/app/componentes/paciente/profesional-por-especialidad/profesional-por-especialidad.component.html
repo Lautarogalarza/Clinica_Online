@@ -1,1 +1,16 @@
-<p>profesional-por-especialidad works!</p>
+<div class="tabla">
+    <table>
+        <thead>
+            <tr>
+                <th>Especialidades</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <tr *ngFor="let especialidad of especialidades"  (click)="EnviarProfesional(especialidad)" >
+                <td>{{especialidad}} </td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>

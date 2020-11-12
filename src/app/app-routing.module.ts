@@ -5,9 +5,9 @@ import { LoginContenedorComponent } from './componentes/login-contenedor/login-c
 import { NoExisteComponent } from './componentes/no-existe/no-existe.component';
 import { HomePacienteComponent } from './componentes/paciente/home-paciente/home-paciente.component';
 import { PerfilComponent } from './componentes/perfil/perfil.component';
+import { HistoriaClinicaCargarComponent } from './componentes/profesional/historia-clinica-cargar/historia-clinica-cargar.component';
 import { HomeProfesionalComponent } from './componentes/profesional/home-profesional/home-profesional.component';
 import { ProfesionalNoHabilitadoComponent } from './componentes/profesional/profesional-no-habilitado/profesional-no-habilitado.component';
-import { ReseniaEncuestaComponent } from './componentes/profesional/resenia-encuesta/resenia-encuesta.component';
 import { AuthRutasGuard } from './guards/auth-rutas.guard';
 
 
@@ -19,7 +19,7 @@ const MiRuteo = [
   { path: 'admin', component: AdminPanelComponent, canActivate: [AuthRutasGuard] },
   { path: 'perfilUsuario', component: PerfilComponent, canActivate: [AuthRutasGuard] },
   { path: 'noHabilitado', component: ProfesionalNoHabilitadoComponent, canActivate: [AuthRutasGuard] },
-  { path: 'atencion', component: ReseniaEncuestaComponent, canActivate: [AuthRutasGuard] },
+  { path: 'atencion', component: HistoriaClinicaCargarComponent, canActivate: [AuthRutasGuard] },
   { path: '**', component: NoExisteComponent }];
 
 

@@ -9,6 +9,7 @@ export class AdminPanelComponent implements OnInit {
 
   habilitadoCargarProf: boolean = false;
   habilitadoCargarAdmin: boolean = false;
+  habilitadoAgregarEspecialidad:boolean=false;
 
   constructor() { }
 
@@ -19,17 +20,30 @@ export class AdminPanelComponent implements OnInit {
 
     this.habilitadoCargarProf = true;
     this.habilitadoCargarAdmin = false;
+    this.habilitadoAgregarEspecialidad=false;
 
+  }
+
+  CargarAgregar(){
+    this.habilitadoAgregarEspecialidad=true;
+    this.habilitadoCargarProf = false;
+    this.habilitadoCargarAdmin = false;
   }
 
   CargarAdmin() {
     this.habilitadoCargarAdmin = true;
     this.habilitadoCargarProf = false;
+    this.habilitadoAgregarEspecialidad=false;
   }
 
   CancelarCargarAdmin(boolean) {
     this.habilitadoCargarAdmin = boolean;
   }
+
+  CancelarAgregarEspecialidad(boolean) {
+    this.habilitadoAgregarEspecialidad = boolean;
+  }
+
 
   CancelarHabilitarProf(boolean) {
     this.habilitadoCargarProf = boolean;

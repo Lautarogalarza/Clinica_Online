@@ -9,11 +9,15 @@
 
             <div class="subLogin">
 
+                <div class="datosPersonales">
+                    <input type="text" class="sinError" placeholder="Nombre" [(ngModel)]="nombre">
+          
+                    <input type="text" class="sinError" placeholder="Apellido" [(ngModel)]="apellido">
+                  </div>
+
                 <input type="email" id="fname" class="sinError" name="firstname" placeholder="Correo Electronico"
                     [(ngModel)]="correo">
-
                 <br>
-
                 <input type="password" id="lname" class="sinError" name="lastname" placeholder="Contraseña"
                     [(ngModel)]="contrasenia">
                 <br>

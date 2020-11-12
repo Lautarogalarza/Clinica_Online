@@ -1,0 +1,34 @@
+<div class="encuesta">
+    <div class="login-title">
+        <span> Encuesta</span>
+    </div>
+
+    <div class="encuesta-textarea">
+        <p>Ingrese un breve comentario:</p>
+        <textarea name="" id="encuesta-textarea" cols="30" rows="10" required [(ngModel)]="resenia"></textarea>
+    </div>
+    <div class="respuestas-row">
+        <div class="encuesta-radio">
+            <p class="bold">Seleccione un nivel de satisfaccion:</p>
+            <div class="optItem">
+                <label for="">Muy satisfactorio</label>
+                <input type="radio" name="group1" checked value="Muy satisfactorio"
+                    (change)="OnItemChange($event)">
+            </div>
+            <div class="optItem">
+                <label for="">Satisfactorio</label>
+                <input type="radio" name="group1" value="Satisfactorio" (change)="OnItemChange($event)">
+            </div>
+            <div class="optItem">
+                <label for="">Poco satisfactorio</label>
+                <input type="radio" name="group1" value="Poco satisfactorio" (change)="OnItemChange($event)">
+            </div>
+            <div class="botones2">
+                <button (click)='CancelarTurnoRechazado()' class="botonCerrarEncuesta">Cerrar</button>
+                <button (click)='GuardarEncuesta()' class="botonCerrarEncuesta">Guardar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -33,7 +33,13 @@ import { AtenderPacienteComponent } from './componentes/profesional/atender-paci
 import { PerfilComponent } from './componentes/perfil/perfil.component';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { ProfesionalNoHabilitadoComponent } from './componentes/profesional/profesional-no-habilitado/profesional-no-habilitado.component';
-import { ReseniaEncuestaComponent } from './componentes/profesional/resenia-encuesta/resenia-encuesta.component';
+import { DatePipe } from '@angular/common';
+import { CancelarTurnoComponent } from './componentes/paciente/cancelar-turno/cancelar-turno.component';
+import { RechazarTurnoComponent } from './componentes/paciente/rechazar-turno/rechazar-turno.component';
+import { VerTurnoAceptadoComponent } from './componentes/paciente/ver-turno-aceptado/ver-turno-aceptado.component';
+import { VerTurnoCanceladoRechazadoComponent } from './componentes/paciente/ver-turno-cancelado-rechazado/ver-turno-cancelado-rechazado.component';
+import { EncuestaReseniaComponent } from './componentes/profesional/encuesta-resenia/encuesta-resenia.component';
+import { HistoriaClinicaCargarComponent } from './componentes/profesional/historia-clinica-cargar/historia-clinica-cargar.component';
 
 
 @NgModule({
@@ -60,7 +66,12 @@ import { ReseniaEncuestaComponent } from './componentes/profesional/resenia-encu
     AtenderPacienteComponent,
     PerfilComponent,
     ProfesionalNoHabilitadoComponent,
-    ReseniaEncuestaComponent
+    CancelarTurnoComponent,
+    RechazarTurnoComponent,
+    VerTurnoAceptadoComponent,
+    VerTurnoCanceladoRechazadoComponent,
+    EncuestaReseniaComponent,
+    HistoriaClinicaCargarComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -75,7 +86,7 @@ import { ReseniaEncuestaComponent } from './componentes/profesional/resenia-encu
     AngularFireStorageModule
     
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

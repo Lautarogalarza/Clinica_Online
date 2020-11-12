@@ -95,7 +95,6 @@ _Los usuarios de la clinica tambien cuentan con una seccion donde pueden ver sus
 
 Este proyecto fue desarrollado con las siguientes tecnologias:
 
-_Este proyecto fue creado con:_
 * [Angular](https://angular.io/) - utilizado en su version 10.1.7
 * [Firebase](https://firebase.google.com/) - Herramientas de autenticacion y base de datos utilizadas.
 

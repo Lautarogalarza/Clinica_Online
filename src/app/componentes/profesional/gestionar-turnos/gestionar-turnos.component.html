@@ -4,10 +4,9 @@
             <div class="login-title">
                 <h1>Gestionar Turnos</h1>
             </div>
-
             <div class="columna2">
                 <div class="card">
-                    <div class="tabla">
+                    <div class="tabla" *ngIf="rechazoCancelacion">
                         <table>
                             <thead>
                                 <tr>
@@ -39,9 +38,13 @@
                 </div>
             </div>
 
-            <button class="botonLogin" (click)="Cancelar()">Cancelar</button>
+            
+            <button  *ngIf="rechazoCancelacion" class="botonLogin" (click)="Cancelar()">Cancelar</button>
         </div>
-
+         <div class="RechazarTurno" *ngIf="cancelarTurnoHabilitado">
+             <app-rechazar-turno [turno]='turno' (emitCancelar)="TurnoRechazadoCancelar($event)"></app-rechazar-turno>
+         </div>
+        
     </div>
 
 </div>

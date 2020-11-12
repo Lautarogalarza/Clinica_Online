@@ -1,16 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { AngularFireDatabase } from '@angular/fire/database';
 import { TurnosService } from 'src/app/servicios/turnos.service';
 import { Location } from '@angular/common';
-import { AngularFireDatabase } from '@angular/fire/database';
-
 @Component({
-  selector: 'app-resenia-encuesta',
-  templateUrl: './resenia-encuesta.component.html',
-  styleUrls: ['./resenia-encuesta.component.scss']
+  selector: 'app-historia-clinica-cargar',
+  templateUrl: './historia-clinica-cargar.component.html',
+  styleUrls: ['./historia-clinica-cargar.component.scss']
 })
-export class ReseniaEncuestaComponent implements OnInit {
+export class HistoriaClinicaCargarComponent implements OnInit {
 
+  
   turno;
   datosPaciente;
   datosExtra = [];
@@ -26,6 +25,8 @@ export class ReseniaEncuestaComponent implements OnInit {
   edad;
   temperatura;
   habilitado: boolean = false;
+  botonesHabilitados:boolean=true;
+  EncuestaHabilitada:boolean=false;
   mensaje;
 
   constructor(private turnoService: TurnosService, private location: Location, private context: AngularFireDatabase) { }
@@ -88,7 +89,7 @@ export class ReseniaEncuestaComponent implements OnInit {
       comentarioProfesional: this.resenia,
       datosPaciente: this.datosPaciente
     });
-    this.habilitado = false;
+  
   }
 
   GuardarDatos() {
@@ -115,10 +116,8 @@ export class ReseniaEncuestaComponent implements OnInit {
         datosExtra: datoExtraAux
       }
 
-      console.log(datosExtra);
-
-
-      this.habilitado = true;
+      this.EncuestaHabilitada = true;
+      this.botonesHabilitados = false
 
     }
     else {
@@ -133,5 +132,10 @@ export class ReseniaEncuestaComponent implements OnInit {
     this.datosPaciente.splice(index, 1)
   }
 
+  TurnoRechazadoCancelar(boolean){
+    this.EncuestaHabilitada = boolean;
+    this.botonesHabilitados = true;
+  }
+ 
 
 }

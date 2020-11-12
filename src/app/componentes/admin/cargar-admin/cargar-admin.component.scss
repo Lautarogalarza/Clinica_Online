@@ -59,7 +59,7 @@
   }
 
   .botonLogin{
-    top: 10%;
+    top: 5%;
     position: relative;
     width: 30%;
     display: inline-block;
@@ -109,7 +109,7 @@
     position: absolute;
     top: 45%;
     width: 50vw; 
-    height: 65vh;  
+    height: 75vh;  
     transform: translateY(-50%);
     overflow: hidden;
     box-shadow: 0 30px 40px rgba(0,0,0,.3);
@@ -124,7 +124,7 @@
 
   input[type=email],[type=password]{
     width: 100%;
-    padding: 25px 20px;
+    padding: 10px 20px;
     margin: 20px 0;
     display: inline-block;
     border: thin;
@@ -136,6 +136,22 @@
     background-color: #5981fa;
     font-size: 2.5vh;
    
+}
+
+.datosPersonales input[type=text]{
+  
+  width: 100%;
+  padding: 10px 20px;
+  margin: 20px 0;
+  display: block;
+  border: thin;
+  border-style: solid;
+  border-radius: 4px;
+  color:ghostwhite ;
+  border-color:#4169E1;
+  box-sizing: border-box;
+  background-color: #5981fa;
+  font-size: 2.5vh;
 }
 
 ::placeholder{

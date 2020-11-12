@@ -14,6 +14,9 @@ export class GestionarTurnosComponent implements OnInit {
   usuarios: Observable<any[]>;
   listadoUsuarios = [];
   listaDos = [];
+  cancelarTurnoHabilitado: boolean = false;
+  rechazoCancelacion: boolean = true;
+  turno;
 
   constructor(private context: AngularFireDatabase, private authService: AuthService) { }
 
@@ -57,11 +60,13 @@ export class GestionarTurnosComponent implements OnInit {
   }
 
   RechazarTurno(turno) {
-    this.context.list('turnos').update(turno.idTurno, {
-      estado: "CANCELADO"
-    });
+    this.cancelarTurnoHabilitado = true;
+    this.rechazoCancelacion = false;
+    this.turno=turno
   }
 
-
-
+  TurnoRechazadoCancelar(boolean){
+    this.cancelarTurnoHabilitado = boolean;
+    this.rechazoCancelacion = true;
+  }
 }

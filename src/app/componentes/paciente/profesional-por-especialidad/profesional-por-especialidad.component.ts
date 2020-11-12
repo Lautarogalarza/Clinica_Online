@@ -1,24 +1,26 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-profesional-por-especialidad',
   templateUrl: './profesional-por-especialidad.component.html',
-  styleUrls: ['./profesional-por-especialidad.component.css']
+  styleUrls: ['./profesional-por-especialidad.component.scss']
 })
 export class ProfesionalPorEspecialidadComponent implements OnInit {
   @Input() listaProfesionales: any;
   especialidades: any[] = [];
   listaAux: any[] = [];
+  @Output() emitProfesional: EventEmitter<any> = new EventEmitter();
+  @Output() emitEspecialidad: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
-   /* setTimeout(() => {
+    setTimeout(() => {
       this.CargarEspecialidades();
-    }, 1000);*/
+    }, 1000);
   }
 
-  /*CargarEspecialidades() {
+  CargarEspecialidades() {
     this.listaProfesionales.forEach(profesional => {
       profesional.especialidades.forEach(especialidad => {
         if (!this.especialidades.includes(especialidad)) {
@@ -26,13 +28,33 @@ export class ProfesionalPorEspecialidadComponent implements OnInit {
         }
       });
     });
-
-    this.CargarProfesionales();
-
+    // this.CargarProfesionales();
   }
 
-  CargarProfesionales() {
 
+
+
+  EnviarProfesional(esp) {
+    let ProfesionalPorEspecialidad = [];
+
+    this.listaProfesionales.forEach(profesional => {
+      profesional.especialidades.forEach(especialidad => {
+        if (especialidad == esp) {
+          ProfesionalPorEspecialidad.push(profesional);
+        }
+      });
+    });
+
+    this.emitProfesional.emit(ProfesionalPorEspecialidad);
+    this.emitEspecialidad.emit(esp);
+  }
+
+
+
+
+
+  /*CargarProfesionales() {
+    console.log(this.especialidades);
     let aux = [];
     let flag: boolean = false;
 
@@ -45,9 +67,7 @@ export class ProfesionalPorEspecialidadComponent implements OnInit {
             flag = true;
           }
         });
-
         if (flag) {
-
           aux.push({
             especialidad: especialidad,
             profesional: this.listaAux
@@ -61,17 +81,13 @@ export class ProfesionalPorEspecialidadComponent implements OnInit {
     this.CargarProfesionalesConEspecialidades(aux)
   }
 
-
   CargarProfesionalesConEspecialidades(especialidadesProf) {
 
     especialidadesProf.forEach(element => {
       console.log(element);
     });
 
-
-
   }*/
-
 
 }
 

@@ -110,7 +110,27 @@
   
 }
 
+.botonCancelar{
+  position: relative;
+  width: 85%;
+  display: inline-block;
+  background-color:#e14141;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: ghostwhite;
+  margin: 5px 0;
+  border: none;
+  cursor: pointer;
+  font-size: 2.0vh;
+  transition: 0.5s;
+  letter-spacing: 1px;
+}
 
+.botonCancelar:hover
+{
+  background: rgb(250, 135, 141);
+  transform:scale(1.05);
+}
 .botonLogin:hover
 {
   background: lightskyblue;
@@ -136,7 +156,7 @@
   position: absolute;
   top: 45%;
   width: 60vw; 
-  height: 60vh;  
+  height: 70vh;  
   transform: translateY(-50%);
   box-shadow: 0 30px 40px rgba(0,0,0,.3);
   
@@ -190,3 +210,10 @@ font-size: 1.5em;
 }
 
 
+.cancelarTurno{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -30%;
+  position: relative;
+}

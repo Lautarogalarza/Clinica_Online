@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ReseniaEncuestaComponent } from './resenia-encuesta.component';
+import { VerTurnoAceptadoComponent } from './ver-turno-aceptado.component';
 
-describe('ReseniaEncuestaComponent', () => {
-  let component: ReseniaEncuestaComponent;
-  let fixture: ComponentFixture<ReseniaEncuestaComponent>;
+describe('VerTurnoAceptadoComponent', () => {
+  let component: VerTurnoAceptadoComponent;
+  let fixture: ComponentFixture<VerTurnoAceptadoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ReseniaEncuestaComponent ]
+      declarations: [ VerTurnoAceptadoComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ReseniaEncuestaComponent);
+    fixture = TestBed.createComponent(VerTurnoAceptadoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
