@@ -33,7 +33,7 @@ export class GestionarHorasComponent implements OnInit {
     sabado: false
   };
 
-  duracion = 30;
+  duracion = 60;
 
   CargarMensaje(mensaje: string) {
 
