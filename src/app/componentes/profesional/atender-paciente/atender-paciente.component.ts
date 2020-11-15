@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { Route } from '@angular/compiler/src/core';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
@@ -19,7 +20,7 @@ export class AtenderPacienteComponent implements OnInit {
   rechazoCancelacion: boolean = true;
   listaDos = [];
   turno;
-  constructor(private context: AngularFireDatabase, private authService: AuthService, private router:Router,private turnoService:TurnosService) { }
+  constructor(private context: AngularFireDatabase, private authService: AuthService, private router:Router,private turnoService:TurnosService,private datePipe : DatePipe) { }
 
   ngOnInit(): void {
 
@@ -32,9 +33,12 @@ export class AtenderPacienteComponent implements OnInit {
   }
 
   TraerTurnos() {
+    let hoy = new Date();
+    let nuevaFecha = this.datePipe.transform(hoy, "yyyy-MM-dd");
+    console.log(nuevaFecha);     
     this.authService.GetCurrentUser().then(response => {
       this.listadoUsuarios = this.listadoUsuarios.filter(p => p.estado == "ACEPTADO"
-        && p.idProfesional == response.uid);
+        && p.idProfesional == response.uid && nuevaFecha==p.solicitudFecha);
     });
   }
 
